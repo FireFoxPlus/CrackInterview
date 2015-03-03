@@ -5,7 +5,7 @@ public class main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		chap8 ob = new chap8();
-		System.out.println(ob.reBlank("asb askl as"));
+		System.out.println(ob.compressStr("aabcccccaaa"));
 		
 		if(ob.isSame("abc", "bad"))
 			System.out.println("true");

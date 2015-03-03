@@ -62,17 +62,27 @@ public class chap8 {
     
   //1.5实现字符压缩，例如，aabcccccaaa则变为a2b1c5a3，若压缩之后字符串没有变短，则返回原字符串
     public String compressStr(String val){
-    	String rs;
+    	StringBuffer buf;
+    	int count = 0;
     	boolean changed = false;
     	for(int i = 0; i < val.length(); i++){
-    		
-    		
+    		if(i == 0){
+    			buf.append(val.charAt(i));
+    			continue;
+    		}   		
+    		if(val.charAt(i) != val.charAt(i - 1) && count != 0){
+    			buf.append(count);
+    			buf.append(charAt(i));
+    			count = 0;
+    		}
+    		else if(val.charAt(i) == val.charAt(i - 1)){
+    			count++;
+    			changed = true;
+    		}
     	}
-    	
-    	
-    	
-    
-    	return rs;
+    	if(!changed)
+    		return val;
+    	return buf.toString();
     }
 
 }
