@@ -1,10 +1,8 @@
 package edu.crackInterview;
 
 import java.util.Arrays;
-//1.6给定N*N的矩阵表示图像，其中每个像素4字节，将图像旋转90度，不占用额外存储空间可否做到？
-//1.7若M*N矩阵中某个元素为0，则将其所在行与列清零
-//1.8假定有方法isSubstring，可检查一个单词是否为其他字符串的子串，给定两个字符串s1和s2，
-//验证s2是否由s1旋转而成，要求只能调用一次isSubstring
+import java.util.HashSet;
+import java.util.Set;
 
 public class chap8 {
 	//1.1
@@ -60,29 +58,48 @@ public class chap8 {
     	return rs;
     }
     
-  //1.5实现字符压缩，例如，aabcccccaaa则变为a2b1c5a3，若压缩之后字符串没有变短，则返回原字符串
+  //1.5
     public String compressStr(String val){
-    	StringBuffer buf;
-    	int count = 0;
+    	StringBuffer buf = new StringBuffer();
+    	int counts = 0;
     	boolean changed = false;
     	for(int i = 0; i < val.length(); i++){
     		if(i == 0){
     			buf.append(val.charAt(i));
     			continue;
     		}   		
-    		if(val.charAt(i) != val.charAt(i - 1) && count != 0){
-    			buf.append(count);
-    			buf.append(charAt(i));
-    			count = 0;
+    		if(val.charAt(i) != val.charAt(i - 1)){
+    			buf.append(counts + 1);
+    			buf.append(val.charAt(i));
+    			counts = 0;
     		}
     		else if(val.charAt(i) == val.charAt(i - 1)){
-    			count++;
+    			counts++;
     			changed = true;
     		}
     	}
+    	if(counts != 0)
+    		buf.append(counts + 1);
     	if(!changed)
     		return val;
     	return buf.toString();
+    }
+  //1.6给定N*N的矩阵表示图像，其中每个像素4字节，将图像旋转90度，不占用额外存储空间可否做到？
+    
+  //1.7若M*N矩阵中某个元素为0，则将其所在行与列清零
+  //先遍历找0，记录行列，再以此作为判别标准
+   
+    
+  //1.8假定有方法isSubstring，可检查一个单词是否为其他字符串的子串，给定两个字符串s1和s2，
+  //验证s2是否由s1旋转而成，要求只能调用一次isSubstring  
+    public boolean isSwap(String str1 , String str2)
+    {
+    	str1 = str1 + str1 + str1;
+    	str2 = str2 + str2;
+    	if(str1.indexOf(str2) == -1)
+    		return false;
+    	else
+    		return true;
     }
 
 }
