@@ -1,8 +1,6 @@
 package edu.crackInterview;
 
 import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
 
 public class chap8 {
 	//1.1
@@ -85,11 +83,29 @@ public class chap8 {
     	return buf.toString();
     }
   //1.6给定N*N的矩阵表示图像，其中每个像素4字节，将图像旋转90度，不占用额外存储空间可否做到？
+	public void roll(int[][] values, int n) {
+		for (int i = 0; i < n / 2; i++) {
+			for (int j = 0; j < n - i - 1; j++) {
+				// 上到右
+				int tmp1 = values[i + j][n - i - 1];
+				values[i + j][n - i - 1] = values[i][j];
+				// 右到下
+				int tmp2 = values[n - i - 1][n - i - 1 - j];
+				values[n - i - 1][n - i - 1 - j] = tmp1;
+				tmp1 = tmp2;
+				// 下到左
+				tmp2 = values[n - i - 1 - j][i];
+				values[n - i - 1 - j][i] = tmp1;
+				// 左到上
+				values[i][j] = tmp2;
+			}
+		}
+	}
 
   //1.7若M*N矩阵中某个元素为0，则将其所在行与列清零
-  //先遍历找0，记录行列，再以此作为判别标准
-
-
+  //先遍历找0，记录行列号，再以此作为判别标准
+    
+    
   //1.8假定有方法isSubstring，可检查一个单词是否为其他字符串的子串，给定两个字符串s1和s2，
   //验证s2是否由s1旋转而成，要求只能调用一次isSubstring
     public boolean isSwap(String str1 , String str2)

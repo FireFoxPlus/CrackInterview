@@ -1,7 +1,14 @@
 package edu.crackInterview;
 
+import java.util.LinkedList;
+
+
 public class chap8_2 {
 	//2.1 移除未排序链表中的重复节点
+	public void removeRe(LinkedList<Object> value)
+	{
+		
+	}
 	//2.2找出单向链表中倒数第k个节点
 	//2.3删除单向链表中间的某个节点，假定你只能访问该节点
 	//2.4以给定的值x为基准将链表分为两部分，所有小于x的节点排在大于或等于x的几点之前
