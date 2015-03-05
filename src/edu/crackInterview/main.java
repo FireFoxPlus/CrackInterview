@@ -15,7 +15,6 @@ public class main {
 		list.add(4);
 		list.add(5);
 		list.add(6);
-		ob.splitByX(list, 2);
 //		for(Integer a : list){
 //			System.out.println(a.intValue());
 //		}

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "BigNum.h"
+#include "cycleText.h"
 
 using namespace std;
 
@@ -8,16 +8,14 @@ int main()
     slist<int> num1;
     slist<int> num2;
     slist<int> *rs;
-    BigNum_2 ob;
+    cycleText<int> ob;
     num1.tailInsert(4);
     num1.tailInsert(0);
     num1.tailInsert(0);
-    num1.tailInsert(0);
-    num2.tailInsert(2);
-    num2.tailInsert(1);
-    num2.tailInsert(5);
-    rs = ob.add_2(&num1 , &num2);
-    rs->print();
-
+    num1.tailInsert(4);
+    if(ob.isCycle(num1))
+        cout<<"true"<<endl;
+    else
+        cout<<"false"<<endl;
     return 0;
 }
