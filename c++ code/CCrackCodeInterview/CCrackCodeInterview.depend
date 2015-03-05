@@ -39,9 +39,9 @@
 	<iostream>
 	<cstring>
 
-1425516726 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
+1425531119 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
 	<iostream>
-	"BigNum.h"
+	"cycleText.h"
 
 1425346062 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\reverse.cpp
 	"reverse.h"
@@ -58,4 +58,7 @@
 	"utils.h"
 	<time.h>
 	<stdlib.h>
+
+1425531097 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\cycletext.h
+	"utils.h"
 

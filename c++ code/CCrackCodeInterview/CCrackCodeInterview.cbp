@@ -38,6 +38,7 @@
 		<Unit filename="SplitByX.h" />
 		<Unit filename="cycleHead.h" />
 		<Unit filename="cycleText.h" />
+		<Unit filename="isBalance.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="reverse.cpp" />
 		<Unit filename="reverse.h" />
