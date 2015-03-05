@@ -1,0 +1,61 @@
+# depslib dependency file v1.0
+1425346062 source:e:\crackcodeinterview\ccrackcodeinterview\reverse.cpp
+	"reverse.h"
+
+1425346069 e:\crackcodeinterview\ccrackcodeinterview\reverse.h
+
+1425516726 source:e:\crackcodeinterview\ccrackcodeinterview\main.cpp
+	<iostream>
+	"BigNum.h"
+
+1425471936 source:e:\crackcodeinterview\ccrackcodeinterview\splitbyx.cpp
+	"SplitByX.h"
+
+1425468697 e:\crackcodeinterview\ccrackcodeinterview\splitbyx.h
+	"utils.h"
+
+1425468751 e:\crackcodeinterview\ccrackcodeinterview\utils.h
+	<iostream>
+	<cstring>
+
+1425257541 source:e:\crackcodeinterview\ccrackcodeinterview\utils.cpp
+	"utils.h"
+	<time.h>
+	<stdlib.h>
+
+1425516346 source:e:\crackcodeinterview\ccrackcodeinterview\bignum.cpp
+	"BigNum.h"
+
+1425515132 e:\crackcodeinterview\ccrackcodeinterview\bignum.h
+	"utils.h"
+
+1425517095 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\bignum.cpp
+	"BigNum.h"
+
+1425515132 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\bignum.h
+	"utils.h"
+
+1425468751 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\utils.h
+	<iostream>
+	<cstring>
+
+1425516726 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
+	<iostream>
+	"BigNum.h"
+
+1425346062 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\reverse.cpp
+	"reverse.h"
+
+1425346069 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\reverse.h
+
+1425471936 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\splitbyx.cpp
+	"SplitByX.h"
+
+1425468697 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\splitbyx.h
+	"utils.h"
+
+1425257541 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\utils.cpp
+	"utils.h"
+	<time.h>
+	<stdlib.h>
+
