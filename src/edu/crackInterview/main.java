@@ -10,13 +10,12 @@ public class main {
 			for(int col = 0; col < 4; col++)
 				flag[line][col] = false;
 		
-		int[][] graph = {{0 , 1 , 0 , 0} , {0 , 0 , 1 , 0} , {1 , 0 , 0 , 1} , {0 , 0 , 0 , 0}};
+		int[][] graph = {{0 , 1 , 0 , 0} , {0 , 0 , 1 , 1} , {0 , 0 , 0 , 0} , {0 , 0 , 0 , 0}};
 		
 		chap8_4 ob = new chap8_4();
-		if(ob.isPath(graph, 4, 4, 2, flag))
+		if(ob.isPath(graph, 4, 3, 4, flag))
 			System.out.println("true");
 		else
 			System.out.println("false");
 	}
-
 }

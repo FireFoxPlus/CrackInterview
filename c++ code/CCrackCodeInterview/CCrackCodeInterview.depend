@@ -39,9 +39,9 @@
 	<iostream>
 	<cstring>
 
-1425560612 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
+1425609708 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
 	<iostream>
-	"isBalance.h"
+	"minBTree.h"
 
 1425346062 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\reverse.cpp
 	"reverse.h"
@@ -64,4 +64,10 @@
 
 1425600520 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\isbalance.h
 	"utils.h"
+
+1425608754 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\minbtree.h
+	"utils.h"
+
+1425610320 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\minbtree.cpp
+	"minBTree.h"
 

@@ -10,10 +10,6 @@ public class chap8_4 {
 		int line , col;
 		src--;
 		dst--;
-//		boolean[][] flag = new boolean[size][size];
-//		for(line = 0; line < size; line++)
-//			for(col = 0; col < size; col++)
-//				flag[line][col] = false;
 		for(col = 0; col < size; col++)
 		{
 			if(graph[src][col] != 0)
@@ -29,6 +25,8 @@ public class chap8_4 {
 	
 	//4.3给定有序整数数组，元素各不相同且按升序排列，创建一棵高度最小的二叉查找树
 	//二分查找
+	
+	
 	//4.4给定一棵二叉树，创建含有某一深度上所有节点的链表。比如：一棵树的深度为D，则会创建D个链表
 	//4.5实现一个函数，检查一棵二叉树是否为二叉查找树 
 	//4.6找出二叉查找树中指定节点的下一个节点，即中序后继，可以假定每个节点都含有指向父节点的连接
