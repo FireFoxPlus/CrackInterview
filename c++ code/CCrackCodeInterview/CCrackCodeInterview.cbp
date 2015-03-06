@@ -36,12 +36,20 @@
 		<Unit filename="BigNum.h" />
 		<Unit filename="SplitByX.cpp" />
 		<Unit filename="SplitByX.h" />
+		<Unit filename="createDepList.h" />
 		<Unit filename="cycleHead.h" />
 		<Unit filename="cycleText.h" />
 		<Unit filename="isBalance.h" />
+		<Unit filename="isSearchTree.cpp" />
+		<Unit filename="isSearchTree.h" />
+		<Unit filename="isSubTree.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="minBTree.cpp" />
+		<Unit filename="minBTree.h" />
 		<Unit filename="reverse.cpp" />
 		<Unit filename="reverse.h" />
+		<Unit filename="sumPath.cpp" />
+		<Unit filename="sumPath.h" />
 		<Unit filename="utils.cpp" />
 		<Unit filename="utils.h" />
 		<Extensions>
