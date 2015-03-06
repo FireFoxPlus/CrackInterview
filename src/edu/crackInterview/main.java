@@ -5,20 +5,18 @@ import java.util.Stack;
 public class main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		chap8_3 ob = new chap8_3();
-		Stack<Integer> src = new Stack<Integer>();
-		Stack<Integer> help = new Stack<Integer>();
-		Stack<Integer> dst = new Stack<Integer>();
-		src.push(6);
-		src.push(5);
-		src.push(4);
-		src.push(3);
-		src.push(2);
-		src.push(1);
-		ob.Hanoi(src, help, dst, 6);
-		while(!dst.isEmpty())
-			System.out.println(dst.pop());
+		boolean[][] flag = new boolean[4][4];
+		for(int line = 0; line < 4; line++)
+			for(int col = 0; col < 4; col++)
+				flag[line][col] = false;
+		
+		int[][] graph = {{0 , 1 , 0 , 0} , {0 , 0 , 1 , 0} , {1 , 0 , 0 , 1} , {0 , 0 , 0 , 0}};
+		
+		chap8_4 ob = new chap8_4();
+		if(ob.isPath(graph, 4, 4, 2, flag))
+			System.out.println("true");
+		else
+			System.out.println("false");
 	}
 
 }

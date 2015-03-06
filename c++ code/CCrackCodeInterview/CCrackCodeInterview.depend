@@ -39,9 +39,9 @@
 	<iostream>
 	<cstring>
 
-1425531119 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
+1425560612 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
 	<iostream>
-	"cycleText.h"
+	"isBalance.h"
 
 1425346062 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\reverse.cpp
 	"reverse.h"
@@ -60,5 +60,8 @@
 	<stdlib.h>
 
 1425531097 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\cycletext.h
+	"utils.h"
+
+1425600520 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\isbalance.h
 	"utils.h"
 
