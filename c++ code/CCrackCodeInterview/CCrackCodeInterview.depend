@@ -39,9 +39,9 @@
 	<iostream>
 	<cstring>
 
-1425622545 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
+1425625631 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
 	<iostream>
-	"isSubTree.h"
+	"sumPath.h"
 
 1425346062 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\reverse.cpp
 	"reverse.h"
@@ -82,4 +82,10 @@
 
 1425622726 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\issubtree.h
 	"utils.h"
+
+1425625420 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\sumpath.h
+	"utils.h"
+
+1425625061 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\sumpath.cpp
+	"sumPath.h"
 

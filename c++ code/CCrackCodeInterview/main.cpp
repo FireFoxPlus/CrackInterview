@@ -1,18 +1,13 @@
 #include <iostream>
-#include "isSubTree.h"
+#include "sumPath.h"
 
 using namespace std;
 
 int main()
 {
-    int a[] = {1 ,2 ,3 ,4 ,5 ,6};
-    int b[] = {2 , 4 , 5};
-    btree<int> tree1(a , 6);
-    btree<int> tree2(b , 3);
-    isSubTree<int> oo;
-    if(oo.isSubs(tree1.getRoot() , tree2.getRoot()))
-        cout<<"true";
-    else
-        cout<<"false";
+    int a[] = {1 ,2 ,3 , 1 , 2 ,6};
+    btree<int> tree(a , 6);
+    sumPath ob;
+    ob.Bfs(tree.getRoot() , 4);
     return 0;
 }
