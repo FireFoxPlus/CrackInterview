@@ -39,9 +39,9 @@
 	<iostream>
 	<cstring>
 
-1425610843 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
+1425622545 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
 	<iostream>
-	"createDepList.h"
+	"isSubTree.h"
 
 1425346062 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\reverse.cpp
 	"reverse.h"
@@ -78,5 +78,8 @@
 	"isSearchTree.h"
 
 1425616541 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\issearchtree.h
+	"utils.h"
+
+1425622726 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\issubtree.h
 	"utils.h"
 
