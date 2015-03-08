@@ -1,16 +1,19 @@
 #include <iostream>
-#include "createDepList.h"
+#include "isSearchTree.h"
 
 using namespace std;
 
 int main()
 {
-    int a[] = {1 , 2 , 3 , 4 , 5 , 6 , 7};
+
+    int a[] = {5 , 3 , 7 , 2 , 3 , 6 , 4};
     btree<int> tree(a , 7);
-    createDepList<int> ob;
-    slist<slist<bnode<int> *> > rs;
-    ob.createLists_2(tree.getRoot() , 1 , rs);
-    cout<<rs.getLength();
+    isSearchTree ob;
+    if(ob.isSearch(tree.getRoot() , INT_MIN , INT_MAX))
+        cout<<"true";
+    else
+        cout<<"false";
+
 
     return 0;
 }

@@ -1,18 +1,13 @@
 #include "isSearchTree.h"
+#include <limits>
 
-bool isSearchTree::isSearch(bnode<int> *root)
+bool isSearchTree::isSearch(bnode<int> *root , int mins , int maxs)
 {
     if(root == NULL)
         return true;
-    if(isSearch(root->getLeft()) && isSearch(root->getRight()))
-    {
-        if(root->getRight() == NULL && root->getLeft() != NULL)
-            return root->getLeft()->getValue() < root->getValue();
-        if(root->getLeft() == NULL && root->getRight() != NULL)
-            return root->getRight()->getValue() > root->getValue();
-        if(root->getLeft() == NULL && root->getRight() == NULL)
-            return true;
-        if(root->getLeft() != NULL && root->getRight() != NULL)
-            return root->getLeft()->getValue() < root->getValue() && root->getRight()->getValue() > root->getValue();
-    }
+    if(root->getValue() > maxs || root->getValue() < mins)
+        return false;
+    if(!isSearch(root->getLeft() , mins , root->getValue()) || !isSearch(root->getRight() , root->getValue() , maxs))
+        return false;
+    return true;
 }
