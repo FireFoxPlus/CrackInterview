@@ -1,28 +1,27 @@
 #include "sumPath.h"
 
- bool sumPath::sumPaths(bnode<int>* root , int sum)
+void sumPath::sumPaths(bnode<int>* root , int sum , int target , slist<int> &paths)
  {
     if(root ==  NULL)
-        return false;
-    if(root->getValue() == sum)
+        return;
+    paths.tailInsert(root->getValue());
+    if(sum + root->getValue() == target)
     {
-        cout<<root->getValue()<<' ';
-        return true;
+        paths.print();
+        cout<<endl;
     }
-    if(root->getValue() > sum)
-        return false;
-    if(root->getValue() < sum)
-    {
-        if(sumPaths(root->getLeft() , sum - root->getValue()) || sumPaths(root->getRight() , sum - root->getValue()))
-        {
-            cout<<root->getValue()<<' ';
-            return true;
-        }
-    }
+
+    //paths.tailInsert(root->getValue());
+    sumPaths(root->getLeft() , sum + root->getValue() , target , paths);
+    sumPaths(root->getRight() , sum + root->getValue() , target , paths);
+
+    paths.tailDel();
+    return;
  }
 
 void sumPath::Bfs(bnode<int> *root , int sum)
 {
+    slist<int> path;
     mqueue<bnode<int> *> que;
     if(root == NULL)
         return;
@@ -30,8 +29,9 @@ void sumPath::Bfs(bnode<int> *root , int sum)
     while(que.getLength() != 0)
     {
         bnode<int> *tmp = que.deQueue();
-        if(sumPaths(tmp , sum))
-            cout<<endl;
+        sumPaths(tmp , 0 , sum , path);
+//        if(sumPaths(tmp , 0 , sum , path))
+//            cout<<endl;
         if(tmp->getLeft() != NULL)
             que.addQueue(tmp->getLeft());
         if(tmp->getRight() != NULL)

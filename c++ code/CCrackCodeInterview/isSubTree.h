@@ -32,7 +32,7 @@ bool isSubTree<T>::isSubs(bnode<T> *root1 , bnode<T> *root2)
     while(que.getLength() != 0)
     {
         bnode<T> *tmp = que.deQueue();
-        if(isSub(tmp ,; root2))
+        if(isSub(tmp , root2))
             return true;
         if(tmp->getLeft() != NULL)
             que.addQueue(tmp->getLeft());

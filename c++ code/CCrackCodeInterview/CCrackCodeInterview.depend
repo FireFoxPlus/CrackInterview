@@ -39,9 +39,9 @@
 	<iostream>
 	<cstring>
 
-1425784462 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
+1425797327 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
 	<iostream>
-	"isSearchTree.h"
+	"sumPath.h"
 
 1425346062 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\reverse.cpp
 	"reverse.h"
@@ -84,9 +84,18 @@
 1425622726 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\issubtree.h
 	"utils.h"
 
-1425625420 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\sumpath.h
+1425798256 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\sumpath.h
 	"utils.h"
 
-1425625666 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\sumpath.cpp
+1425797701 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\sumpath.cpp
 	"sumPath.h"
+
+1425785834 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\findnextinsearchtree.cpp
+	"findNextInSearchTree.h"
+
+1425785289 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\findnextinsearchtree.h
+	"utils.h"
+
+1425795157 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\firstances.h
+	"utils.h"
 

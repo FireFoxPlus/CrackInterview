@@ -5,6 +5,6 @@
 class sumPath
 {
 public :
-    bool sumPaths(bnode<int> *root , int sum);
+    void sumPaths(bnode<int> *root , int sum , int target , slist<int> &paths);
     void Bfs(bnode<int> *root , int sum);
 };
