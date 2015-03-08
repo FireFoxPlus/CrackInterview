@@ -356,7 +356,6 @@ public :
                 father = que.deQueue();
             }
         }
-
     }
     bnode<T>* getRoot()
     {
