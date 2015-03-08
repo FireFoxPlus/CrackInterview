@@ -39,6 +39,9 @@
 		<Unit filename="createDepList.h" />
 		<Unit filename="cycleHead.h" />
 		<Unit filename="cycleText.h" />
+		<Unit filename="findNextInSearchTree.cpp" />
+		<Unit filename="findNextInSearchTree.h" />
+		<Unit filename="firstAnces.h" />
 		<Unit filename="isBalance.h" />
 		<Unit filename="isSearchTree.cpp" />
 		<Unit filename="isSearchTree.h" />
