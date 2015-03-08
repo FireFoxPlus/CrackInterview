@@ -1,5 +1,7 @@
 package edu.crackInterview;
 
+import java.util.LinkedList;
+
 public class chap8_5 {
 	//5.1给定两个32位整数N和M，以及表示比特位置的i和j，将M插入N，使得M从N的第j位开始，到第i位结束，假定从
 	//j位到i位足以容纳M
@@ -36,8 +38,44 @@ public class chap8_5 {
 	//数组A的元素皆以二进制表示，唯一可用的访问操作是从A[i]取出第j位操作，给操作的时间复杂度为常数。找出缺失的整数，在O(n)
 	public int getMissing(int[] vals , int n )
 	{
-		
-		
+		int rs = 0;
+		LinkedList<Integer> zero = new LinkedList<Integer>();
+		LinkedList<Integer> nonZero = new LinkedList<Integer>();
+		for(int i = 0; i < n; i++)
+		{
+			zero.add(vals[i]);
+		}
+		int i = 0;
+		while(true)
+		{
+			for(int k = 0; k < zero.size(); k++)
+			{
+				if((zero.get(k) & (1<<i)) == 1)
+					nonZero.add(zero.get(k));
+			}
+			zero.removeAll(nonZero);			
+			if(zero.size() == 0 && nonZero.size() == 0)
+				break;
+			if(zero.size() <= nonZero.size())
+			{
+				//此位为0
+				rs  = rs | (0 << i);
+				i++;
+				nonZero.clear();
+			}
+			else
+			{
+				//此位为1
+				rs =  rs | (1 << i);
+				i++;
+				LinkedList<Integer> tmp;
+				tmp = zero;
+				zero = nonZero;
+				nonZero = tmp;
+				nonZero.clear();
+			}
+		}
+		return rs;
 	}
 	
 	
