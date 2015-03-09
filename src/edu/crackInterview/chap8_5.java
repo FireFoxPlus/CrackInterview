@@ -74,16 +74,18 @@ public class chap8_5 {
 			tmp = tmp >> 1;
 		}
 		num = num | (1 << (zeroLoc - 1));//·­×ª0
-		for(int i = 0; i < zeroLoc - 1; i++)
-		{
-				mask = mask | (1 << i);
-		}
-		num = num & ~mask;//ÇåÁã
+//		for(int i = 0; i < zeroLoc - 1; i++)
+//		{
+//				mask = mask | (1 << i);
+//		}
+		mask = mask | ~((1 << (zeroLoc - 1)) - 1);
+		num = num & mask;//ÇåÁã
 		mask = 0;
-		for(int i = 0; i < countOne - 1; i++)
-		{
-			mask = mask | (1 << i);
-		}
+//		for(int i = 0; i < countOne - 1; i++)
+//		{
+//			mask = mask | (1 << i);
+//		}
+		mask = mask | ((1 << countOne - 1) - 1);
 		num = num | mask;
 		return num;
 	}
