@@ -1,5 +1,7 @@
 package edu.crackInterview;
 
+import java.util.LinkedList;
+
 public class chap8_7 {
 	//筛选法生成素数列表
 	//7.1有个篮筐，两种玩法：
@@ -80,11 +82,43 @@ public class chap8_7 {
 	//关键在于对浮点数的处理
 	
 	//7.7有些数的素因子只有3，5，7，设计算法，找出其中第K个	
-
-	public int getKth()
+	public int getMins(int val1 , int val2)
 	{
-		
-		
+		return val1 < val2 ? val1 : val2;
+	}
+	
+	public int getKth(int k ){
+		int tmp = 3;
+		LinkedList<Integer> que3 = new LinkedList<Integer>();
+		LinkedList<Integer> que5 = new LinkedList<Integer>();
+		LinkedList<Integer> que7 = new LinkedList<Integer>();
+		que3.add(3);
+		que5.add(5);
+		que7.add(7);
+		while(k > 0)
+		{
+			tmp = getMins(que3.getFirst() , getMins(que5.getFirst() , que7.getFirst()));
+			if(tmp == que3.getFirst())
+			{
+				que3.removeFirst();
+				que3.add(3 * tmp);
+				que5.add(5 * tmp);
+				que7.add(7 * tmp);
+			}
+			else if(tmp == que5.getFirst())
+			{
+				que5.removeFirst();
+				que5.add(5 * tmp);
+				que7.add(7 * tmp);
+			}
+			else if(tmp == que7.getFirst())
+			{
+				que7.removeFirst();
+				que7.add(7 * tmp);
+			}
+			k--;
+		}
+		return tmp;
 	}
 	
 }
