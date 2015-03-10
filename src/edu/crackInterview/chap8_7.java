@@ -19,20 +19,62 @@ public class chap8_7 {
 	//不要假设斜率和截距为整数，所以此题的关键在于浮点数的判等
 	
 	//7.4实现整数的乘法、减法、除法，只允许用加号
+	public int opposite(int val)
+	{
+		int rs = 0;
+		int pace = val > 0 ? -1 : 1;
+		while(val != 0)
+		{
+			val += pace;
+			rs += pace;
+		}
+		return rs;
+	}
+	
+	public int abs(int num)
+	{
+		if(num < 0)
+			return opposite(num);
+		return num;
+	}
+	
+	public int minus(int num1 , int num2)
+	{
+		return num1 + opposite(num2);
+	}
+	
 	public int Mutil(int num1 , int num2)
 	{
 		if(num2 < 0 && num1 > 0)
 			return Mutil(num2 , num1);
 		if(num2 < 0 && num1 < 0)
-			return Mutil(Math.abs(num1), Math.abs(num2));
+			return Mutil(abs(num1) , abs(num2));
 		int rs = 0;
 		for(int i = 0; i < num2; i++)
 			rs += num1;
 		return rs;
 	}
+	
+	public int divide(int num1 , int num2)
+	{
+		if(num1 < 0 && num2 < 0)
+			return divide(opposite(num1) , opposite(num2));
+		if((num1 >0 && num2 < 0) || (num1 < 0 && num2 > 0))
+			return opposite(divide(abs(num1) , abs(num2)));
+		int rs = 0;
+		while(num2 <= num1)
+		{
+			num1 -= num2;
+			rs++;
+		}
+		return rs;		
+	}
 
 	//7.5在二维平面上，有两个正方形，请找出一条直线，能将这两个正方形对半分，
 	//假定正方形的上下两条边与x轴平行
+	//该直线一定是过两正方形中心的，
+	//注意两正方形中心重合的情况，以及斜率不存在的情况
+	
 	//7.6在二维平面上，有一些点，找出经过点数最多的直线
 	//7.7有些数的素因子只有3，5，7，设计算法，找出其中第K个
 }
