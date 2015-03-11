@@ -39,9 +39,10 @@
 	<iostream>
 	<cstring>
 
-1425797327 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
+1426079345 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
 	<iostream>
 	"sumPath.h"
+	<vector>
 
 1425346062 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\reverse.cpp
 	"reverse.h"
@@ -98,4 +99,7 @@
 
 1425795157 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\firstances.h
 	"utils.h"
+
+1426074820 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\test.cpp
+	<vector>
 
