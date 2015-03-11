@@ -5,7 +5,7 @@ import java.util.Stack;
 public class main {
 
 	public static void main(String[] args) {
-		chap8_7 ob = new chap8_7();
-		System.out.println(ob.getKth(5));
+		chap8_9 ob = new chap8_9();
+		System.out.println(ob.upstair(4));
 	}
 }
