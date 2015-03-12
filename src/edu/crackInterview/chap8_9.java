@@ -1,5 +1,9 @@
 package edu.crackInterview;
 
+import java.util.HashMap;
+import java.util.LinkedList;
+
+
 public class chap8_9 {
 	//9.1有个小孩正在上楼梯，楼梯有n阶，小孩可以一次上1阶、2阶或3阶，求小孩共有
 	//多少种上楼方式
@@ -15,24 +19,60 @@ public class chap8_9 {
 	}
 	//9.2有个机器人坐在x*y的网格的左上角，只能向右、下移动，机器人从(0 , 0)到
 	//(x , y)有多少种走法？
-	public int paths(int srcx , int srcy , int dstx , int dsty)
+	public int paths(point src , point dst)
 	{
-		if(srcx == dstx && srcy - 1 == dsty)
+		if(src.getX() == dst.getX() && src.getY() - 1 == dst.getY())
 			return 1;
-		if(srcx + 1 == dstx && srcy == dsty)
+		if(src.getX() + 1 == dst.getX() && src.getY() == dst.getY())
 			return 1;
-		return paths(srcx + 1, srcy , dstx , dsty) + paths(srcx , srcy - 1 , dstx , dsty);
-		
+		return paths(new point(src.getX() + 1 , src.getY()) , dst) +
+				paths(new point(src.getX() , src.getY() - 1) , dst);
 	}
 	//进阶：假设某些点为禁区，找出一条从左上角到右下角的路
-	public boolean paths_2(int srcx , int srcy , int dstx , int dsty , int disx , int disy)
+	public void printPath(LinkedList<point> rs)
 	{
-		if(srcx == dstx && srcy - 1 == dsty)
+		for(int i = 0; i < rs.size(); i++)
+			System.out.print(rs.get(i).getX() + "," + rs.get(i).getY()+ "#");
+		System.out.println();
+	}
+	public boolean paths_2(point src , point dst , point dis , LinkedList<point> rs)
+	{
+		if(src.getX() > dst.getX())
+			return false;
+		if(src.getY() < dst.getY())
+			return false;
+		if(src.getX() == dst.getX() && src.getY() - 1 == dst.getY())
+		{
+			rs.add(src);
+			printPath(rs);
+			rs.removeLast();
 			return true;
-		if(srcx + 1 == dstx && srcy == dsty)
+		}
+		if(src.getX() + 1 == dst.getX() && src.getY() == dst.getY())
+		{
+			rs.add(src);
+			printPath(rs);
+			rs.removeLast();
 			return true;
-		
-			return true;
+		}
+		if(src.getX() + 1 == dis.getX() && src.getY() == dis.getY())
+			return false;
+		if(src.getX() == dis.getX() && src.getY() + 1 == dis.getY())
+			return false;
+		if((src.getX() + 1 == dis.getX() && src.getY() != dis.getY()) 
+				|| (src.getX() + 1 != dis.getX())){
+			rs.add(src);
+			paths_2(new point(src.getX() + 1, src.getY()), dst, dis, rs);
+			rs.removeLast();
+		}
+		if((src.getY() - 1 == dis.getY() && src.getX() != dis.getX()) 
+				|| src.getY() - 1 != dis.getY())
+		{
+			rs.add(src);
+			paths_2(new point(src.getX() , src.getY() - 1), dst, dis, rs);
+			rs.removeLast();
+		}
+		return true;
 	}
 	
 	//9.3在A[0...n-1]中，有所谓的魔术索引，满足A[i] = i;给定一个有序整数数组，元素值
