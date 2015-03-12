@@ -36,7 +36,8 @@
 		<Unit filename="BigNum.h" />
 		<Unit filename="SplitByX.cpp" />
 		<Unit filename="SplitByX.h" />
-		<Unit filename="Test.cpp" />
+		<Unit filename="allString.cpp" />
+		<Unit filename="allString.h" />
 		<Unit filename="createDepList.h" />
 		<Unit filename="cycleHead.h" />
 		<Unit filename="cycleText.h" />
