@@ -39,10 +39,11 @@
 	<iostream>
 	<cstring>
 
-1426079345 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
+1426167571 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
 	<iostream>
-	"sumPath.h"
 	<vector>
+	"allString.h"
+	<cstring>
 
 1425346062 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\reverse.cpp
 	"reverse.h"
@@ -102,4 +103,11 @@
 
 1426074820 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\test.cpp
 	<vector>
+
+1426167445 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\allstring.h
+
+1426167426 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\allstring.cpp
+	<iostream>
+	<cstring>
+	"allString.h"
 
