@@ -78,8 +78,44 @@ public class chap8_9 {
 	//9.3在A[0...n-1]中，有所谓的魔术索引，满足A[i] = i;给定一个有序整数数组，元素值
 	//各不相同，在数组A中找出一个魔术索引，如果存在的话
 	//进阶：数组元素如果有重复，如何处理？
+	
 	//9.4求某集合所有子集
+	//或者使用二进制加法模拟
+	public void subSet(int[] vals , int start , int end , LinkedList<LinkedList<Integer> > rs){
+		if(start == end){
+			LinkedList<Integer> tmp = new LinkedList<Integer>();
+			tmp.add(vals[start]);
+			rs.add(tmp);
+			return;
+		}
+		subSet(vals , start + 1 , end , rs);
+		int len = rs.size();
+		for(int i = 0; i < len; i++)
+		{
+			LinkedList<Integer> new_tmp = new LinkedList<Integer>();
+			LinkedList<Integer> tmp = rs.get(i);
+			new_tmp.add(vals[start]);
+			for(int j = 0; j < tmp.size(); j++)
+				new_tmp.add(tmp.get(j));
+			rs.add(new_tmp);		
+		}
+		LinkedList<Integer> tmp = new LinkedList<Integer>();
+		tmp.add(vals[start]);
+		rs.add(tmp);
+	}
+	public void printRs(LinkedList<LinkedList<Integer> > rs)
+	{
+		LinkedList<Integer> tmp = new LinkedList<Integer>();
+		for(int i= 0; i < rs.size(); i++){
+			tmp = rs.get(i);
+			for(int j = 0; j < tmp.size(); j++)
+				System.out.print(tmp.get(j));
+			System.out.println();
+		}
+	}
 	//9.5求某字符串所有排列组合
+	//已用c实现
+	
 	//9.6打印n对括号所有的有效组合
 	//9.7编写函数，实现填充颜色功能。给定一个屏幕（二维数组，元素为颜色值），
 	//一个点和一个新的颜色值。将新颜色值填入这个点的周围区域。直到原来的颜色全部改变
