@@ -117,7 +117,58 @@ public class chap8_9 {
 	//已用c实现
 	
 	//9.6打印n对括号所有的有效组合
-	
+	public void printBracket(int n)
+	{
+		int min = 0;
+		for(int i = 0; i < n; i++)
+		{
+			min = min | (1 << i);
+		}
+		for(int i = min; (i & (1 << (2 * n - 1))) != (1 << (2 * n - 1)); i++)
+		{
+			if(getOneNum(i) != n)
+				continue;
+			if(judgeZero(i , n * 2))
+				printBracket(i , n * 2);
+		}
+		
+	}
+	public boolean judgeZero(int num , int noto)
+	{
+		int countZero = 0 , countOne = 0;
+		for(int i = noto - 1; i >= 0; i--)
+		{
+			if((num & (1 << i)) == (1 << i))
+				countOne++;
+			else
+				countZero++;
+			if(countOne > countZero)
+				return false;
+		}
+		return true;
+	}
+	public void printBracket(int num , int noto)
+	{
+		for(int i = noto - 1; i >= 0; i--)
+		{
+			if((num & (1 << i)) == (1 << i))
+				System.out.print(")");
+			else
+				System.out.print("(");
+		}
+		System.out.println();
+	}
+	public int getOneNum(int num)
+	{
+		int count = 0;
+		while(num != 0)
+		{
+			count++;
+			num = num & (num - 1);
+		}
+		return count;
+	}
+
 	//9.7编写函数，实现填充颜色功能。给定一个屏幕（二维数组，元素为颜色值），
 	//一个点和一个新的颜色值。将新颜色值填入这个点的周围区域。直到原来的颜色全部改变
 	//9.8给定不限数量的硬币，25、10、5、1分。n分有几种表示方式？
