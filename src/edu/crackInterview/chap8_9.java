@@ -205,7 +205,67 @@ public class chap8_9 {
 	}
 	
 	//9.8给定不限数量的硬币，25、10、5、1分。n分有几种表示方式？
+	// 可以用三个for循环，太笨
+	public int getNCent(int val)
+	{
+		return 1;
+	}
+	
 	//9.9打印八皇后的所有摆法
+	public void eightQue()
+	{
+		int[][] val = new int[8][8];
+		int[] line = {-1 , -1 , -1 , -1 , -1 , -1 , -1 , -1 };
+		int[] col = {-1 , -1 , -1 , -1 , -1 , -1 , -1 , -1 };
+		for(int i = 0; i < 8; i++)
+			for(int j = 0; j < 8; j++)
+				val[i][j] = 0;
+		eightQue(val, line, col, 1);
+	}
+	
+	public void eightQue(int[][] val , int[] line , int[] col , int ith){
+		if(ith > 8)
+		{
+			for(int i = 0; i < 8; i++)
+			{
+				for(int j = 0; j < 8; j++)
+				{
+					System.out.print(val[i][j]);
+					
+				}
+				System.out.println();
+			}
+			System.out.println("#####################");
+			return;
+		}
+		for(int i = 0; i < 8; i++)
+		{
+			if(poiValid(val , col , ith , i))
+			{
+				val[ith][i] = 1;
+				line[ith] = 1;
+				col[i] = 1;
+				eightQue(val, line, col, ith + 1);
+			}
+		}		
+	}
+	
+	public boolean poiValid(int[][] val , int[] col , int now_line , int now_col)
+	{
+		for(int i = 0; i < 8; i++)
+			if(now_col == col[i])
+				return false;
+		
+		for(int i = 0; i < 8; i++)
+			for(int j = 0; j < 8; j++)
+			{
+				if(i + j == now_col + now_line)
+					if(val[i][j] == 1)
+						return false;
+			}
+		return true;
+	}
+	
 	//9.10那个箱子，宽w，高h，深d。箱子不可翻转，箱子堆起来的时候，
 	//下面箱子的宽、高、深必须大于上面的箱子，搭出最高的箱子，箱堆的高度为每个箱子的
 	//高度的和
