@@ -171,6 +171,39 @@ public class chap8_9 {
 
 	//9.7编写函数，实现填充颜色功能。给定一个屏幕（二维数组，元素为颜色值），
 	//一个点和一个新的颜色值。将新颜色值填入这个点的周围区域。直到原来的颜色全部改变
+	public void colorScreen(int[][] screen , int hei , int wid , point seed , int color)
+	{
+		int seedx = seed.getX();
+		int seedy = seed.getY();
+		if(seedy - 1 == 0 || seedy - 1 == wid - 1)
+		{
+			screen[seedx - 1][seedy - 1] = color;
+			return;
+		}
+		if(seedx - 1 == 0 || seedx - 1 == hei - 1)
+		{
+			screen[seedx - 1][seedy - 1] = color;
+			return;
+		}
+		screen[seedx - 1][seedy - 1] = color;
+		if(screen[seedx - 2][seedy - 1] != color)
+			colorScreen(screen, hei, wid, new point(seedx - 1 , seedy), color);
+		if(screen[seedx][seedy - 1] != color)
+			colorScreen(screen, hei, wid, new point(seedx + 1 , seedy), color);
+		if(screen[seedx - 2][seedy - 2] != color)
+			colorScreen(screen, hei, wid, new point(seedx - 1 , seedy - 1), color);
+		if(screen[seedx - 1][seedy - 2] != color)
+			colorScreen(screen, hei, wid, new point(seedx  , seedy - 1), color);
+		if(screen[seedx - 1][seedy] != color)
+			colorScreen(screen, hei, wid, new point(seedx  , seedy + 1), color);
+		if(screen[seedx - 2][seedy] != color)
+			colorScreen(screen, hei, wid, new point(seedx - 1 , seedy + 1), color);
+		if(screen[seedx][seedy] != color)
+			colorScreen(screen, hei, wid, new point(seedx + 1 , seedy + 1), color);
+		if(screen[seedx][seedy - 2] != color)
+			colorScreen(screen, hei, wid, new point(seedx + 1 , seedy - 1), color);
+	}
+	
 	//9.8给定不限数量的硬币，25、10、5、1分。n分有几种表示方式？
 	//9.9打印八皇后的所有摆法
 	//9.10那个箱子，宽w，高h，深d。箱子不可翻转，箱子堆起来的时候，
