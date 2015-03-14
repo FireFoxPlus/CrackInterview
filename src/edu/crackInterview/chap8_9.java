@@ -210,7 +210,6 @@ public class chap8_9 {
 	{
 		return 1;
 	}
-	
 	//9.9打印八皇后的所有摆法
 	public void eightQue()
 	{
@@ -240,12 +239,15 @@ public class chap8_9 {
 		}
 		for(int i = 0; i < 8; i++)
 		{
-			if(poiValid(val , col , ith , i))
+			if(poiValid(val , col , ith - 1 , i))
 			{
-				val[ith][i] = 1;
-				line[ith] = 1;
+				line[ith - 1] = 1;
 				col[i] = 1;
+				val[ith - 1][i] = 1;
 				eightQue(val, line, col, ith + 1);
+				val[ith - 1][i] = 0;
+				line[ith - 1] = 0;
+				col[i] = 0;
 			}
 		}		
 	}
@@ -253,22 +255,27 @@ public class chap8_9 {
 	public boolean poiValid(int[][] val , int[] col , int now_line , int now_col)
 	{
 		for(int i = 0; i < 8; i++)
-			if(now_col == col[i])
+			if(col[now_col] == 1)
 				return false;
 		
-		for(int i = 0; i < 8; i++)
-			for(int j = 0; j < 8; j++)
-			{
-				if(i + j == now_col + now_line)
-					if(val[i][j] == 1)
-						return false;
-			}
+		for(int i = 0; now_col - i >= 0 && now_line - i >= 0; i++)
+		{
+				if(val[now_line - i][now_col - i] == 1)
+					return false;
+		}
+		for(int i = 0; now_line - i >= 0 && now_col + i < 8; i++)
+		{
+				if(val[now_line - i][now_col + i] == 1)
+					return false;
+		}
 		return true;
 	}
 	
 	//9.10那个箱子，宽w，高h，深d。箱子不可翻转，箱子堆起来的时候，
 	//下面箱子的宽、高、深必须大于上面的箱子，搭出最高的箱子，箱堆的高度为每个箱子的
 	//高度的和
+	
+	
 	//9.11给定布尔表达式，由0 ， 1 ， & ， | ， ^组成，以及一个想要的结果rs，
 	//实现一个函数，计算有几种括号的放置方法可以得出rs
 	//比如：1^0|0|1
