@@ -346,28 +346,29 @@ public class chap8_9 {
 	// 比如：1^0|0|1
 	// 期望：false
 	// 1^((0|0)|1)和1^(0|(0|1))
-	public boolean getBoolean(String val, boolean rs) {
-		if (val.length() == 3) {
-			int tmp1 = val.charAt(0), tmp2 = val.charAt(2);
-			if (val.charAt(1) == '|')
-				tmp1 = tmp1 | tmp2;
-			else if (val.charAt(1) == '^')
-				tmp1 = tmp1 ^ tmp2;
-			else if (val.charAt(1) == '&')
-				tmp1 = tmp1 & tmp2;
-			if (tmp1 == 1 && rs)
-				return true;
-			if (tmp1 == 0 && !rs)
-				return true;
-			return false;
+	public int getTF(String exp , boolean rs , int start , int end)
+	{
+		int ways = 0;
+		if(start == end)
+		{
+			if(exp.charAt(end) == '1' && rs)
+				return 1;
+			else if(exp.charAt(end) == '0' && !rs)
+				return 1;
+			return 0;
 		}
-		if (val.length() == 1) {
-			if (val.charAt(0) == '1' && rs)
-				return true;
-			if (val.charAt(0) == '0' && !rs)
-				return true;
-			return false;
+		if(rs)
+		{
+			for(int i = start + 1; i < end; i += 2)
+			{
+				
+				
+			}
 		}
-
+	
+	
+	
+	
+	
 	}
-}
+	}
