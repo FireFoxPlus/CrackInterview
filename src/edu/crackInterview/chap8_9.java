@@ -359,16 +359,34 @@ public class chap8_9 {
 		}
 		if(rs)
 		{
-			for(int i = start + 1; i < end; i += 2)
+			for(int i = start + 1; i <= end; i += 2)
 			{
-				
-				
+				if(exp.charAt(i) == '&')
+					ways += getTF(exp , true , start, i - 1) * getTF(exp , true , i + 1 , end);
+				else if(exp.charAt(i) == '|')
+					ways += getTF(exp , true , start , i - 1) * getTF(exp , true , i + 1 , end)
+					+  getTF(exp , true , start , i - 1) * getTF(exp , false , i + 1 , end)
+					+ getTF(exp , false , start , i - 1) * getTF(exp , true , i + 1 , end);
+				else if(exp.charAt(i) == '^')
+					ways +=  getTF(exp , true , start , i - 1) * getTF(exp , false , i + 1 , end)
+					+  getTF(exp , false , start , i - 1) * getTF(exp , true , i + 1 , end);
 			}
 		}
-	
-	
-	
-	
-	
+		else
+		{
+			for(int i = start + 1; i <= end; i += 2)
+			{
+				if(exp.charAt(i) == '&')
+					ways += getTF(exp , false , start, i - 1) * getTF(exp , true , i + 1 , end)
+					+ getTF(exp , true , start, i - 1) * getTF(exp , false , i + 1 , end)
+					+ getTF(exp , false , start, i - 1) * getTF(exp , false , i + 1 , end);
+				else if(exp.charAt(i) == '|')
+					ways += getTF(exp , false , start , i - 1) * getTF(exp , false , i + 1 , end);
+				else if(exp.charAt(i) == '^')
+					ways +=  getTF(exp , true , start , i - 1) * getTF(exp , true , i + 1 , end)
+					+  getTF(exp , false , start , i - 1) * getTF(exp , false , i + 1 , end);
+			}
+		}
+		return ways;
 	}
-	}
+}
