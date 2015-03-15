@@ -198,6 +198,31 @@ public class chap8_9 {
 		}
 		return count;
 	}
+	public void printBrackets(int n)
+	{
+		StringBuffer rs = new StringBuffer();
+		printBrackets(n , n  , rs);
+	}
+	public void printBrackets(int left , int right , StringBuffer rs)
+	{
+		if(left == 0 && right == 0)
+		{
+			System.out.println(rs.toString());
+			return;
+		}
+		if(left != 0)
+		{
+			rs.append("(");
+			printBrackets(left - 1 , right , rs);
+			rs.deleteCharAt(rs.length() - 1);
+		}
+		if(right != 0 && right > left){
+			rs.append(")");
+			printBrackets(left , right - 1 , rs);
+			int len = rs.length();
+			rs.deleteCharAt(len - 1);
+		}		
+	}
 
 	// 9.7编写函数，实现填充颜色功能。给定一个屏幕（二维数组，元素为颜色值），
 	// 一个点和一个新的颜色值。将新颜色值填入这个点的周围区域。直到原来的颜色全部改变
@@ -238,8 +263,26 @@ public class chap8_9 {
 
 	// 9.8给定不限数量的硬币，25、10、5、1分。n分有几种表示方式？
 	// 可以用三个for循环，太笨
-	public int getNCent(int val) {
-		return 1;
+	public int getNCent(int val , int weight) 
+	{
+		int next_weight = 0;
+		int ways = 0;
+		switch(weight)
+		{
+		case 25:
+			next_weight = 10;
+			break;
+		case 10:
+			next_weight = 5;
+			break;
+		case 5 :
+			next_weight = 1;
+		case 1 :
+			return 1;
+		}
+		for(int i = 0; i * weight < val; i++)
+			ways = getNCent(val - i * weight, next_weight);
+		return ways;
 	}
 
 	// 9.9打印八皇后的所有摆法
