@@ -29,7 +29,6 @@ public class chap8_9 {
 	}
 
 	// 进阶：假设某些点为禁区，找出一条从左上角到右下角的路
-	// 此题答案疑有错~
 
 	public void printPath(LinkedList<point> rs) {
 		for (int i = 0; i < rs.size(); i++)
