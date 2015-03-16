@@ -8,7 +8,7 @@ public class main {
 	public static void main(String[] args) {
 		//int[][] screen = {{1 , 1 , 1 , 1} , {1 , 1 , 1 , 1} , {1 , 1 , 1 , 1} , {1 , 1 , 1 , 1}};
 		int a = 34;
-		System.out.println(34 & 2);
+		System.out.println(34 & 4);
 	
 	}
 }
