@@ -7,10 +7,8 @@ public class main {
 
 	public static void main(String[] args) {
 		//int[][] screen = {{1 , 1 , 1 , 1} , {1 , 1 , 1 , 1} , {1 , 1 , 1 , 1} , {1 , 1 , 1 , 1}};
-		int[] a = {1 , 1 , 1 ,4 ,5};
-		chap8_9 ob = new chap8_9();
-		ob.printBrackets(3);
-		System.out.println("%%%%%%%%%%%%");
-		ob.printBracket(3);
+		int a = 34;
+		System.out.println(34 & 2);
+	
 	}
 }
