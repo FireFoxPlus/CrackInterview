@@ -104,22 +104,36 @@ public class chap8_11 {
 	// 假定元素原先为从小到大顺序排列
 	public int found(int[] vals , int low , int high , int target)
 	{
+		if(low < high)
+			return -1;
+		int mid = (high + low) / 2;
+		if(vals[mid] == target)
+			return mid;
 		if(vals[high] > vals[low])
 		//数组有序
 		{
-			int mid = (high + low) / 2;
 			if(vals[mid] > target)
 				return found(vals , low , mid - 1 , target);
 			else
 				return found(vals , mid + 1 , high , target);
 		}
+		else
+		{
+			if(vals[mid] > target)
+				return 
+			
+		}
+		
+		
 		
 	}
 	
-	
 	// 11.4有20Gb的文件，每一行一个字符串，说明如何将这个文件排序
 	// 11.5有排序后的字符串数组，其中散布一些空字符串，找出给定字符串的位置
+	
 	// 11.6给定M*N的矩阵，每一行，每一列都以升序排列，找出某元素
+	//从右上角开始，如果target大于该值，划去该行。如果target小于该值，划去该列
+	
 	// 11.7设计叠罗汉游戏，一个人站在另一个人肩膀上，上面的人更矮更轻。已知所有人的高度和重量，
 	// 计算最多能叠几个人
 	// 11.8正在读取一串整数，每隔一段时间，希望找出数字x的秩（小于或者等于x的值的数目）。
