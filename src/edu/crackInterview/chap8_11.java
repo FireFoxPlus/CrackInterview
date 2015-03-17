@@ -104,27 +104,6 @@ public class chap8_11 {
 	// 假定元素原先为从小到大顺序排列
 	public int found(int[] vals , int low , int high , int target)
 	{
-		if(low < high)
-			return -1;
-		int mid = (high + low) / 2;
-		if(vals[mid] == target)
-			return mid;
-		if(vals[high] > vals[low])
-		//数组有序
-		{
-			if(vals[mid] > target)
-				return found(vals , low , mid - 1 , target);
-			else
-				return found(vals , mid + 1 , high , target);
-		}
-		else
-		{
-			if(vals[mid] > target)
-				return 
-			
-		}
-		
-		
 		
 	}
 	
