@@ -6,13 +6,10 @@ import java.util.Stack;
 public class main {
 
 	public static void main(String[] args) {
-		int[] vals = {4 , 5 , 8 , 9 , 1 , 6};
+		int[] valA = {3 ,5 ,6 ,7 ,8 , 1 , 1 , 1 , 1 , 1};
+		int[] valB = {2 ,4 ,9 ,10 , 11};
 		chap8_11 ob = new chap8_11();
-		ob.fastSort(vals, 0, 5);
-		for(int a: vals)
-		{
-			System.out.println(a);
-		}
-	
+		ob.JoinBA(valA, 5, valB, 5);
+		System.out.println();
 	}
 }
