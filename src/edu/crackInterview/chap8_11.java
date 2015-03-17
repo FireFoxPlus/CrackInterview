@@ -2,7 +2,78 @@ package edu.crackInterview;
 
 public class chap8_11 {
 	//归并排序
+	//start,end分别为起止下标，即0和length - 1
+	public void mergeSort(int[] vals , int start , int end)
+	{
+		if(start >= end)
+			return;
+		int mid = (start + end) / 2;
+		mergeSort(vals , start, mid);
+		mergeSort(vals, mid + 1, end);
+		merge(vals , start , end);
+	}
+	public void merge(int[] vals , int start , int end)
+	{
+		int[] help = new int[end - start + 1];
+		int i;
+		for( i = 0; i < end - start + 1; i++)
+			help[i] = vals[start + i];
+		i--;
+		int preStart = 0;
+		int tailStart = i / 2 + 1;
+		int poi = start;
+		while(preStart <= i / 2 && tailStart <= i)
+		{
+			if(help[preStart] < help[tailStart])
+			{
+				vals[poi] = help[preStart];
+				preStart++;
+				poi++;
+			}
+			else
+			{
+				vals[poi] = help[tailStart];
+				tailStart++;
+				poi++;
+			}
+		}
+		while(preStart <= i / 2)
+		{
+			vals[poi] = help[preStart];
+			poi++;
+			preStart++;
+		}		
+	}
 	//快速排序
+	public void fastSort(int[] val , int start , int end)
+	{
+		if(start > end)
+			return;
+		int bench = partion(val , start , end);
+		fastSort(val , start , bench - 1);
+		fastSort(val , bench + 1 , end);
+	}
+	public int partion(int[] vals , int start , int end)
+	{
+		int mid = (start + end) / 2;
+		int mid_val = vals[mid];
+		while(start < end)
+		{
+			while(vals[start] < mid_val)
+				start++;
+			
+			while(vals[end] > mid_val)
+				end--;
+			if(start < end)
+			{
+				int tmp = vals[start];
+				vals[start] = vals[end];
+				vals[end] = tmp;
+			}
+		}
+		return start;
+				
+	}
 	//11.1给定两个排序后的数组A和B，其中A的末端有足够的缓冲容纳B。编写一个方法，将B合并入A
 	//11.2编写方法，对字符串数组进行排序，将所有变位词排在响相邻位置
 	//11.3给定一个排序后的数组，包含n个整数，但这个数组已经被旋转过多次，次数不知。请查找某个元素

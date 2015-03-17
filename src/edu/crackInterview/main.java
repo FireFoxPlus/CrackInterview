@@ -6,9 +6,13 @@ import java.util.Stack;
 public class main {
 
 	public static void main(String[] args) {
-		//int[][] screen = {{1 , 1 , 1 , 1} , {1 , 1 , 1 , 1} , {1 , 1 , 1 , 1} , {1 , 1 , 1 , 1}};
-		int a = 34;
-		System.out.println(34 & 4);
+		int[] vals = {4 , 5 , 8 , 9 , 1 , 6};
+		chap8_11 ob = new chap8_11();
+		ob.fastSort(vals, 0, 5);
+		for(int a: vals)
+		{
+			System.out.println(a);
+		}
 	
 	}
 }
