@@ -104,9 +104,41 @@ public class chap8_11 {
 	// 假定元素原先为从小到大顺序排列
 	public int found(int[] vals , int low , int high , int target)
 	{
-		
+		if(low > high)
+			return -1;
+		if(vals[low] < vals[high])
+			return BSearch(vals , low , high , target);
+		int mid = (low + high) / 2;
+		if(vals[mid] == target)
+			return mid;
+		int left = found(vals , low , mid - 1 , target);
+		int right = found(vals , mid +1 , high , target);
+		if(left == -1 && right == -1)
+			return -1;
+		return left == -1 ? right : left;
 	}
 	
+	public int BSearch(int[] vals , int low , int high , int target)
+	{
+		if(low > high)
+			return -1;
+		int mid; 
+		while(low <= high)
+		{
+			mid = (low +high) / 2;
+			if(vals[mid] == target)
+				return mid;
+			if(vals[mid] > target)
+			{
+				high = mid - 1;
+			}
+			else
+			{
+				low = mid + 1;
+			}
+		}
+		return -1;
+	}
 	// 11.4有20Gb的文件，每一行一个字符串，说明如何将这个文件排序
 	// 11.5有排序后的字符串数组，其中散布一些空字符串，找出给定字符串的位置
 	

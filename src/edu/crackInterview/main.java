@@ -6,10 +6,8 @@ import java.util.Stack;
 public class main {
 
 	public static void main(String[] args) {
-		int[] valA = {3 ,5 ,6 ,7 ,8 , 1 , 1 , 1 , 1 , 1};
-		int[] valB = {2 ,4 ,9 ,10 , 11};
+		int[] valA = {3 , 4 , 5 , 6 , 1 , 2};
 		chap8_11 ob = new chap8_11();
-		ob.JoinBA(valA, 5, valB, 5);
-		System.out.println();
+		System.out.println(ob.found(valA , 0 , 5 , 2));
 	}
 }
