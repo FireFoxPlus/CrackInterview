@@ -1,5 +1,7 @@
 package edu.crackInterview;
 
+import java.util.Arrays;
+
 public class chap8_11 {
 	// 归并排序
 	// start,end分别为起止下标，即0和length - 1
@@ -93,10 +95,16 @@ public class chap8_11 {
 		}
 	}
 	// 11.2编写方法，对字符串数组进行排序，将所有变位词排在响相邻位置
+	public String rebuildString(String rs)
+	{
+		char[] charRs = rs.toCharArray();
+		Arrays.sort(charRs);
+		return charRs.toString();
+	}
+	
 	public void sortString(String[] vals)
 	{
-		
-		
+
 	}
 	
 	// 11.3给定一个排序后的数组，包含n个整数，但这个数组已经被旋转过多次，次数不知。
@@ -205,6 +213,5 @@ public class chap8_11 {
 	//希望找出数字x的秩（小于或者等于x的值的数目）。
 	// 实现数据结构和算法支持该操作。即实现track(int x)方法，每读一个数字都调用该方法，
 	// 以及getRankOfNumber(int x)，返回值为小于或等于x的元素个数
-	public 
-	
+	//维持在数组中，将大于等于以该值作为下标的数组元素加1
 }
