@@ -3,6 +3,18 @@ package edu.crackInterview;
 public class point {
 	private int x;
 	private int y;
+	public boolean lessThan(point another)
+	{
+		boolean weight =  x < another.getX();
+		boolean height = y < another.getY();
+		return weight && height;
+	}
+	
+	public boolean isInValid(point another)
+	{
+		return x <= another.getX() || y <= another.getY();
+		
+	}
 	public point(int valx , int valy){
 		x = valx;
 		y = valy;

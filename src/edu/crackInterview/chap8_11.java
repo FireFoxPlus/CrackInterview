@@ -179,8 +179,32 @@ public class chap8_11 {
 	// 11.7设计叠罗汉游戏，一个人站在另一个人肩膀上，上面的人更矮更轻。
 	//已知所有人的高度和重量，
 	// 计算最多能叠几个人
+	//求一个最大的降序序列，冒泡
+	public int Bubble(point[] persons)
+	{
+		for(int i = 0; i < persons.length - 1; i++)
+			for(int j = 0; j < persons.length - 1 - i; j++)
+			{
+				if(persons[j].lessThan(persons[j + 1]))
+				{
+					point tmp = persons[j];
+					persons[j] = persons[j + 1];
+					persons[j + 1] = tmp;
+				}
+			}
+		int count;
+		for(count = 0; count < persons.length - 1; count++)
+		{
+			if(persons[count].isInValid(persons[count + 1]))
+				break;
+		}
+		return count + 1;
+	}
+
 	// 11.8正在读取一串整数，每隔一段时间，
 	//希望找出数字x的秩（小于或者等于x的值的数目）。
 	// 实现数据结构和算法支持该操作。即实现track(int x)方法，每读一个数字都调用该方法，
 	// 以及getRankOfNumber(int x)，返回值为小于或等于x的元素个数
+	public 
+	
 }
