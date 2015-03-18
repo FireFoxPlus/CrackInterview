@@ -6,10 +6,9 @@ import java.util.Stack;
 public class main {
 
 	public static void main(String[] args) {
-		int[] valA = {3 , 4 , 5 , 6 , 1 , 2};
-		point[] person = {new point(4, 3) , new point(3, 2) ,new point(5, 5) 
-		,new point(1, 1) ,new point(4, 1) ,new point(5, 0) ,};
+		//String[] vals = {"abc" , "bca" , "ccc" , "bbc" , "bbb" , "cab"};
+		int[] vals = {1 , 3 , 4 , 5 , 6 , 1};
 		chap8_11 ob = new chap8_11();
-		System.out.println(ob.Bubble(person));
+		System.out.println(ob.found(vals , 0 , 5 , 6));
 	}
 }

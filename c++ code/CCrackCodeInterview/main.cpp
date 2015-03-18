@@ -2,12 +2,19 @@
 #include <vector>
 #include "allString.h"
 #include <cstring>
+#include <time.h>
+#include <stdio.h>
 using namespace std;
 
 int main()
 {
-    allString ob;
-    char str[] = "abc";
-    ob.getAllString(str , 0);
+    time_t rawtime;
+    char a = getchar();
+    while((a = getchar()) != '#')
+    {
+        time(&rawtime);
+        cout<<rawtime<<endl;
+    }
+
     return 0;
 }
