@@ -129,25 +129,58 @@ public class chap8_11 {
 			if(vals[mid] == target)
 				return mid;
 			if(vals[mid] > target)
-			{
 				high = mid - 1;
-			}
 			else
-			{
 				low = mid + 1;
-			}
 		}
 		return -1;
 	}
 	// 11.4有20Gb的文件，每一行一个字符串，说明如何将这个文件排序
+	//即在内存有限的情况下进行排序。
+	
 	// 11.5有排序后的字符串数组，其中散布一些空字符串，找出给定字符串的位置
+	public int getString(String[] vals , int start , int end , String target)
+	{
+		if(start > end || end < 0 || start < 0)
+			return -1;
+		int mid = (start + end) / 2;
+		int tmp;
+		if(vals[mid].equals(target))
+			return mid;
+		if(vals[mid].equals(new String("")))
+			tmp = getFirstNotBlank(vals , start , end , -1 , mid);
+		else
+			tmp = mid;
+		if(vals[tmp].compareTo(target) > 0)
+			return getString(vals , start , tmp , target);
+		else if(vals[tmp].equals(target))
+			return tmp;
+		else
+			return getString(vals , getFirstNotBlank(vals , start , end , 1 , tmp) 
+					, end , target);
+		}
+	
+	public int getFirstNotBlank(String[] vals , int start , int end , int pace , int poi)
+	{
+		if(poi > end || poi< start)
+			return -1;
+		while(poi >= start && poi <= end)
+		{
+			if(vals[poi].equals(new String("")))
+				break;
+			poi += pace;
+		}
+		return poi;
+	}
 	
 	// 11.6给定M*N的矩阵，每一行，每一列都以升序排列，找出某元素
 	//从右上角开始，如果target大于该值，划去该行。如果target小于该值，划去该列
 	
-	// 11.7设计叠罗汉游戏，一个人站在另一个人肩膀上，上面的人更矮更轻。已知所有人的高度和重量，
+	// 11.7设计叠罗汉游戏，一个人站在另一个人肩膀上，上面的人更矮更轻。
+	//已知所有人的高度和重量，
 	// 计算最多能叠几个人
-	// 11.8正在读取一串整数，每隔一段时间，希望找出数字x的秩（小于或者等于x的值的数目）。
+	// 11.8正在读取一串整数，每隔一段时间，
+	//希望找出数字x的秩（小于或者等于x的值的数目）。
 	// 实现数据结构和算法支持该操作。即实现track(int x)方法，每读一个数字都调用该方法，
 	// 以及getRankOfNumber(int x)，返回值为小于或等于x的元素个数
 }
