@@ -4,13 +4,14 @@
 #include <time.h>
 #include <stdio.h>
 
-#include "lastKLine.h"
+#include "my2dAlloc.h"
 
 using namespace std;
 
 int main()
 {
-    lastKLine ob;
-    ob.printKLine("jj.txt" , 2);
+    my2DAlloc<int> ob;
+    int** ptr = ob.alloc2D(3 , 4);
+    cout<<endl;
     return 0;
 }
