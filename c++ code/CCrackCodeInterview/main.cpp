@@ -1,20 +1,16 @@
 #include <iostream>
 #include <vector>
-#include "allString.h"
 #include <cstring>
 #include <time.h>
 #include <stdio.h>
+
+#include "lastKLine.h"
+
 using namespace std;
 
 int main()
 {
-    time_t rawtime;
-    char a = getchar();
-    while((a = getchar()) != '#')
-    {
-        time(&rawtime);
-        cout<<rawtime<<endl;
-    }
-
+    lastKLine ob;
+    ob.printKLine("jj.txt" , 2);
     return 0;
 }

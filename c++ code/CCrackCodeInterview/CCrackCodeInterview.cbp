@@ -48,6 +48,8 @@
 		<Unit filename="isSearchTree.cpp" />
 		<Unit filename="isSearchTree.h" />
 		<Unit filename="isSubTree.h" />
+		<Unit filename="lastKLine.cpp" />
+		<Unit filename="lastKLine.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="minBTree.cpp" />
 		<Unit filename="minBTree.h" />

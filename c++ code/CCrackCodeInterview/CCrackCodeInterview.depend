@@ -39,12 +39,13 @@
 	<iostream>
 	<cstring>
 
-1426664352 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
+1426730524 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
 	<iostream>
 	<vector>
-	"allString.h"
 	<cstring>
 	<time.h>
+	<stdio.h>
+	"lastKLine.h"
 
 1425346062 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\reverse.cpp
 	"reverse.h"
@@ -111,4 +112,11 @@
 	<iostream>
 	<cstring>
 	"allString.h"
+
+1426730802 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\lastkline.cpp
+	"lastKLine.h"
+	<stdio.h>
+	<iostream>
+
+1426729469 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\lastkline.h
 
