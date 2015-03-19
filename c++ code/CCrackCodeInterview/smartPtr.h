@@ -14,7 +14,7 @@ public :
     {
         val = src.getSrc();
         counts = src.getCount();
-        *counts++;
+        *counts += 1;
     }
     ~smartPtr()
     {
@@ -30,7 +30,24 @@ public :
     {
         return counts;
     }
+    //赋值运算
+    public smartPtr& operator=(smartPtr &val)
+    {
+        if(this == &val)
+            return *this;\
+        //如果智能指针已有赋值
+        if(*counts > 0)
+        {
+            *counts -= 1;
+            if(counts == 0)
+                delete val;
+        }
 
+        val = val.getSrc();
+        counts = val.getCount();
+        *counts += 1;
+        return *this;
+    }
 private :
     T *val;
     int *counts;

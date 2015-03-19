@@ -43,7 +43,9 @@ public class chap8_13 {
 	//示例：align_malloc(1000 , 128)返回的内存地址可以被128整除。
 	//并指向一块大小为1000字节的内存
 	//align_free会释放align_malloc分配的内存
+	//用c实现
 	
 	//13.10用c编写my2DAlloc函数，可以分配二维数组，
 	//将malloc函数的调用次数降低到最少，并确保可以通过arr[i][j]访问该内存
+	//已用c解决
 }

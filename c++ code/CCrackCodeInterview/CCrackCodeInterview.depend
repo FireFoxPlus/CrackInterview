@@ -39,7 +39,7 @@
 	<iostream>
 	<cstring>
 
-1426750401 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
+1426768293 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
 	<iostream>
 	<vector>
 	<cstring>
@@ -122,5 +122,12 @@
 
 1426748288 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\smartptr.h
 
-1426751189 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\my2dalloc.h
+1426768323 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\my2dalloc.h
+	<stdlib.h>
+
+1426767082 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\alloc.cpp
+	"alloc.h"
+	<stddef.h>
+
+1426766988 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\alloc.h
 

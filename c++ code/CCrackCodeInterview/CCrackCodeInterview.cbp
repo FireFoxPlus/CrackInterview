@@ -38,6 +38,8 @@
 		<Unit filename="SplitByX.h" />
 		<Unit filename="allString.cpp" />
 		<Unit filename="allString.h" />
+		<Unit filename="alloc.cpp" />
+		<Unit filename="alloc.h" />
 		<Unit filename="createDepList.h" />
 		<Unit filename="cycleHead.h" />
 		<Unit filename="cycleText.h" />
@@ -53,8 +55,10 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="minBTree.cpp" />
 		<Unit filename="minBTree.h" />
+		<Unit filename="my2dAlloc.h" />
 		<Unit filename="reverse.cpp" />
 		<Unit filename="reverse.h" />
+		<Unit filename="smartPtr.h" />
 		<Unit filename="sumPath.cpp" />
 		<Unit filename="sumPath.h" />
 		<Unit filename="utils.cpp" />
