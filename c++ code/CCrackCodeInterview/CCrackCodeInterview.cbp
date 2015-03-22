@@ -61,6 +61,8 @@
 		<Unit filename="smartPtr.h" />
 		<Unit filename="sumPath.cpp" />
 		<Unit filename="sumPath.h" />
+		<Unit filename="swapWithoutTmp.cpp" />
+		<Unit filename="swapWithoutTmp.h" />
 		<Unit filename="utils.cpp" />
 		<Unit filename="utils.h" />
 		<Extensions>
