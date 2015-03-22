@@ -1,12 +1,10 @@
 #include <iostream>
 #include <vector>
 #include <cstring>
-#include <time.h>
 #include <stdio.h>
 #include <algorithm>
 
 using namespace std;
-#include "swapWithoutTmp.h"
 
 
 bool compare(string val1 , string val2)
