@@ -39,7 +39,7 @@
 	<iostream>
 	<cstring>
 
-1426768293 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
+1426768426 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
 	<iostream>
 	<vector>
 	<cstring>
@@ -130,4 +130,9 @@
 	<stddef.h>
 
 1426766988 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\alloc.h
+
+1427008677 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\swapwithouttmp.cpp
+	"swapWithoutTmp.h"
+
+1427008544 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\swapwithouttmp.h
 
