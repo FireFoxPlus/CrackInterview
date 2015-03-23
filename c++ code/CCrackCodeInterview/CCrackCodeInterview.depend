@@ -39,13 +39,12 @@
 	<iostream>
 	<cstring>
 
-1426768426 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
+1427070300 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
 	<iostream>
 	<vector>
-	<cstring>
-	<time.h>
+	<string>
 	<stdio.h>
-	"my2dAlloc.h"
+	<algorithm>
 
 1425346062 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\reverse.cpp
 	"reverse.h"
@@ -135,4 +134,13 @@
 	"swapWithoutTmp.h"
 
 1427008544 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\swapwithouttmp.h
+
+1427070460 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\guesscolor.cpp
+	"guessColor.h"
+	<string>
+
+1427070476 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\guesscolor.h
+	<string>
+	<algorithm>
+	<iostream>
 
