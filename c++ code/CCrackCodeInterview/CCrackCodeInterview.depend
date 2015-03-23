@@ -39,12 +39,13 @@
 	<iostream>
 	<cstring>
 
-1427070300 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
+1427088863 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
 	<iostream>
 	<vector>
 	<string>
 	<stdio.h>
 	<algorithm>
+	"getShortSeq.h"
 
 1425346062 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\reverse.cpp
 	"reverse.h"
@@ -143,4 +144,17 @@
 	<string>
 	<algorithm>
 	<iostream>
+
+1427087767 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\getshortseq.cpp
+	"getShortSeq.h"
+	<iostream>
+
+1427086402 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\getshortseq.h
+
+1427088865 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\printstring.cpp
+	"printString.h"
+	<string>
+	<stack>
+
+1427088083 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\printstring.h
 

@@ -1,5 +1,5 @@
 class getShortSeq
 {
 public :
-    void getSeq(int vals[]);
+    void getSeq(int vals[] , int len);
 };

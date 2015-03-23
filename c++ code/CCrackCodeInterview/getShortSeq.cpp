@@ -1,6 +1,7 @@
 #include "getShortSeq.h"
-
-void getShortSeq::getSeq(int vals[])
+#include <iostream>
+using namespace std;
+void getShortSeq::getSeq(int vals[] , int len)
 {
 
 }
