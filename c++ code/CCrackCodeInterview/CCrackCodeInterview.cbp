@@ -46,6 +46,10 @@
 		<Unit filename="findNextInSearchTree.cpp" />
 		<Unit filename="findNextInSearchTree.h" />
 		<Unit filename="firstAnces.h" />
+		<Unit filename="getShortSeq.cpp" />
+		<Unit filename="getShortSeq.h" />
+		<Unit filename="guessColor.cpp" />
+		<Unit filename="guessColor.h" />
 		<Unit filename="isBalance.h" />
 		<Unit filename="isSearchTree.cpp" />
 		<Unit filename="isSearchTree.h" />
