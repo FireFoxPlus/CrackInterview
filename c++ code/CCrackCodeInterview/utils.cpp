@@ -52,3 +52,31 @@ int mmin(int val1 , int val2)
 {
     return val1 < val2 ? val1 : val2;
 }
+
+void midTour(TreeNode* root , TreeNode** tailList)
+{
+    if(root->getLeft() != NULL)
+        midTour(root->getLeft() , tailList);
+    root->setLeft(*tailList);
+    if(*tailList != NULL)
+        (*tailList)->setRight(root);
+    *tailList = root;
+
+    if(root->getRight() != NULL)
+        midTour(root->getRight() , tailList);
+    return;
+}
+
+void buildList(TreeNode* root)
+{
+    if(root == NULL)
+        return;
+    TreeNode* tail = NULL;
+    if(root->getLeft() != NULL)
+        midTour(root->getLeft() , &tail);
+    root->setLeft(tail);
+    tail->setRight(root);
+    tail = root;
+    if(root->getRight() != NULL)
+        midTour(root->getRight() , &tail);
+}

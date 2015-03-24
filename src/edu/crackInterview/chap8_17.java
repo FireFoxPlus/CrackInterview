@@ -20,13 +20,54 @@ public class chap8_17 {
 	//已用c解决
 	
 	//17.7给定一个整数，打印该整数的英文描述
-	//17.8给定一个整数数组，求出综合最大的连续数列，并返回综合
+	
+	//17.8给定一个整数数组，求出综合最大的连续数列，并返回总和
+	public int getMaxSum(int []vals , int len)
+	{
+		int max = 0;
+		int tmp = 0;
+		String rs = null;
+		StringBuffer rsTmp = new StringBuffer();
+		for(int i = 0; i < len; i++)
+		{
+			tmp += vals[i];
+			if(tmp > 0)
+			{
+				rsTmp.append(vals[i]);
+				if(tmp > max)
+				{
+					rs = rsTmp.toString();
+					max = tmp;
+				}
+			}
+			else
+			{
+				tmp = 0;
+				rsTmp.delete(0 , rsTmp.capacity());
+			}
+		}
+		System.out.println(rs);
+		return max;
+	}
 	//17.9设计一个方法，找出任意指定单词在一本书中出现的频率
 	//17.10xml非常冗长，找到一种编码方式，可将每个标签对应为预先定义好的整数值。
 	//打印xml元素编码后的版本
 	//17.11给定rand5()，实现一个方法rand7()。也就是说，给定一个产生0-4随机数的方法，
 	//产生0到6的随机数
+	public int rand5()
+	{
+		return ((int)(Math.random() * 10000)) % 5;
+	}
+	public int rand2()
+	{
+		return rand5() % 2;
+	}
+	public int rand7()
+	{
+		return  rand5() + rand2();
+	}
 	//17.12设计算法，找出数组中，两数之和为指定值的所有整数对
+	
 	//17.13有个简单的类似节点的数据结构BiNode，包含两个指向其他节点的指针
 	//public class{
 	//public BiNode node1 , node2;
@@ -34,6 +75,8 @@ public class chap8_17 {
 	//}
 	// 数据结构BiNode可以用来表示二叉树，或双向链表，编写一个方法， 将二叉查找树
 	//转换为双向链表。要求所有数值的排序不变，
+	//已用c实现
+	
 	//17.14刚写好文章，却因为误用”查找/替换“，不慎删除了文档中所有空格、标点，
 	//大写变为小写。只要能正确的分离各个单词，加标点和大小写都不是问题，大部分单词
 	//在词典中都可以找到，有些则找不到。

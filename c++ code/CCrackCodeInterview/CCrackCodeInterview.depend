@@ -35,17 +35,18 @@
 1425515132 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\bignum.h
 	"utils.h"
 
-1425785469 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\utils.h
+1427199842 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\utils.h
+	"TreeToList.h"
 	<iostream>
 	<cstring>
 
-1427088863 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
+1427200560 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
 	<iostream>
 	<vector>
 	<string>
 	<stdio.h>
 	<algorithm>
-	"getShortSeq.h"
+	"TreeToList.h"
 
 1425346062 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\reverse.cpp
 	"reverse.h"
@@ -58,7 +59,7 @@
 1425468697 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\splitbyx.h
 	"utils.h"
 
-1425257541 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\utils.cpp
+1427200454 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\utils.cpp
 	"utils.h"
 	<time.h>
 	<stdlib.h>
@@ -145,16 +146,19 @@
 	<algorithm>
 	<iostream>
 
-1427087767 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\getshortseq.cpp
+1427089515 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\getshortseq.cpp
 	"getShortSeq.h"
 	<iostream>
 
 1427086402 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\getshortseq.h
 
-1427088865 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\printstring.cpp
+1427089230 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\printstring.cpp
 	"printString.h"
 	<string>
 	<stack>
 
 1427088083 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\printstring.h
+
+1427200517 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\treetolist.h
+	<iostream>
 

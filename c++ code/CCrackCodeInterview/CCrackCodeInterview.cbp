@@ -36,6 +36,7 @@
 		<Unit filename="BigNum.h" />
 		<Unit filename="SplitByX.cpp" />
 		<Unit filename="SplitByX.h" />
+		<Unit filename="TreeToList.h" />
 		<Unit filename="allString.cpp" />
 		<Unit filename="allString.h" />
 		<Unit filename="alloc.cpp" />
@@ -60,6 +61,8 @@
 		<Unit filename="minBTree.cpp" />
 		<Unit filename="minBTree.h" />
 		<Unit filename="my2dAlloc.h" />
+		<Unit filename="printString.cpp" />
+		<Unit filename="printString.h" />
 		<Unit filename="reverse.cpp" />
 		<Unit filename="reverse.h" />
 		<Unit filename="smartPtr.h" />

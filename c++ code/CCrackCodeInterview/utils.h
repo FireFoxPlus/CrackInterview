@@ -1,5 +1,5 @@
 #define UTILS_H
-
+#include "TreeToList.h"
 #include <iostream>
 #include <cstring>
 using namespace std;
@@ -10,6 +10,8 @@ int getRandom(int range);
 int arrayToInt(char *rs);
 int nDigits(int val);
 int mmin(int val1 , int val2);
+void buildList(TreeNode* root);
+void midTour(TreeNode* root , TreeNode** tailList);
 
 //单链表节点
 template<typename T>
