@@ -57,20 +57,21 @@ void ModifyString( char* pText )
 }
 int main( void )
 {
-//    char text[32] = "XYBCDCBABABA";
-//    ModifyString( text );
-//    printf( text );
-    TreeNode a(4);
-    TreeNode b(2);
-    TreeNode c(5);
-    TreeNode d(1);
-    TreeNode e(3);
+    char text[32] = "XYBCDCBABABA";
+    ModifyString( text );
+    printf( text );
 
-    a.setLeft(&b);
-    a.setRight(&c);
-    b.setLeft(&d);
-    b.setRight(&e);
-    buildList(&a);
-    cout<<(d.getRight()->getRight()->getRight()->getValue());
+//    TreeNode a(4);
+//    TreeNode b(2);
+//    TreeNode c(5);
+//    TreeNode d(1);
+//    TreeNode e(3);
+//
+//    a.setLeft(&b);
+//    a.setRight(&c);
+//    b.setLeft(&d);
+//    b.setRight(&e);
+//    buildList(&a);
+//    cout<<(d.getRight()->getRight()->getRight()->getValue());
     return 0;
 }

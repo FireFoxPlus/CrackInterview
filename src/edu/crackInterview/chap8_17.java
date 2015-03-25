@@ -5,7 +5,24 @@ public class chap8_17 {
 	//已用c实现
 	
 	// 17.2判断玩家是否赢了井字游戏
-	
+	public int wonSharpGame(int[][] deck)
+	{
+		//正对角线
+		if(deck[0][0] == deck[1][1] && deck[1][1] == deck[2][2])
+			return deck[0][0];
+		//副对角线
+		if(deck[0][2] == deck[1][1] && deck[0][2] == deck[2][0])
+			return deck[0][2];
+		//行
+		for(int i = 0; i < 3; i++)
+			if(deck[i][0] == deck[i][1] && deck[i][0] == deck[i][2])
+				return deck[i][0];
+		//列
+		for(int i = 0; i < 3; i++)
+			if(deck[0][i] == deck[1][i] && deck[0][i] == deck[2][i])
+				return deck[0][i];
+		return 0;
+	}
 
 	//17.3算出n阶乘有多少个尾随0
 	public int countDivi(int num , int divi)
@@ -32,9 +49,10 @@ public class chap8_17 {
 	//17.4找出两个数字中较大的一个，不用if-else或其他比较运算符
 	public int getBigger(int val1 , int val2)
 	{
+		int rs = val2 * (((val1 - val2)>>31) & 1) +
+				val1 *  (((val2 - val1)>>31) & 1);
 		
-		
-		return val1;
+		return rs;
 	}
 	
 	
