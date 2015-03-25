@@ -162,3 +162,113 @@
 1427200517 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\treetolist.h
 	<iostream>
 
+1427296333 source:e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\alloc.cpp
+	"alloc.h"
+	<stddef.h>
+
+1427296333 e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\alloc.h
+
+1426172645 source:e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\allstring.cpp
+	<iostream>
+	<cstring>
+	"allString.h"
+
+1426172645 e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\allstring.h
+
+1425569421 source:e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\bignum.cpp
+	"BigNum.h"
+
+1425569421 e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\bignum.h
+	"utils.h"
+
+1427296333 e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\utils.h
+	"TreeToList.h"
+	<iostream>
+	<cstring>
+
+1427296333 e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\treetolist.h
+	<iostream>
+
+1426000906 source:e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\findnextinsearchtree.cpp
+	"findNextInSearchTree.h"
+
+1426000906 e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\findnextinsearchtree.h
+	"utils.h"
+
+1427296333 source:e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\guesscolor.cpp
+	"guessColor.h"
+	<string>
+
+1427296333 e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\guesscolor.h
+	<string>
+	<algorithm>
+	<iostream>
+
+1426000906 source:e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\issearchtree.cpp
+	"isSearchTree.h"
+	<limits>
+
+1426000906 e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\issearchtree.h
+	"utils.h"
+
+1427296333 source:e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\lastkline.cpp
+	"lastKLine.h"
+	<stdio.h>
+	<iostream>
+
+1427296333 e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\lastkline.h
+
+1425653438 source:e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\minbtree.cpp
+	"minBTree.h"
+
+1425653438 e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\minbtree.h
+	"utils.h"
+
+1427296333 source:e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\printstring.cpp
+	"printString.h"
+	<string>
+	<stack>
+
+1427296333 e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\printstring.h
+
+1425569421 source:e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\reverse.cpp
+	"reverse.h"
+
+1425569421 e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\reverse.h
+
+1425569421 source:e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\splitbyx.cpp
+	"SplitByX.h"
+
+1425569421 e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\splitbyx.h
+	"utils.h"
+
+1426000906 source:e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\sumpath.cpp
+	"sumPath.h"
+
+1426000906 e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\sumpath.h
+	"utils.h"
+
+1427296333 source:e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\swapwithouttmp.cpp
+	"swapWithoutTmp.h"
+
+1427296333 e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\swapwithouttmp.h
+
+1427296333 source:e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\utils.cpp
+	"utils.h"
+	<time.h>
+	<stdlib.h>
+
+1427300293 source:e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\getshortseq.cpp
+	"getShortSeq.h"
+	<iostream>
+
+1427296333 e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\getshortseq.h
+
+1427299479 source:e:\crackinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
+	<iostream>
+	<vector>
+	<string>
+	<stdio.h>
+	<algorithm>
+	"getShortSeq.h"
+
