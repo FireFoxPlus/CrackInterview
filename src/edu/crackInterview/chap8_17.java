@@ -5,8 +5,38 @@ public class chap8_17 {
 	//已用c实现
 	
 	// 17.2判断玩家是否赢了井字游戏
+	
+
 	//17.3算出n阶乘有多少个尾随0
+	public int countDivi(int num , int divi)
+	{
+		int rs = 0;
+		while(num > 0)
+		{
+			if(num % divi == 0)
+				rs++;
+			num /= divi;
+		}
+		return rs;
+	}
+	
+	public int getLastZero(int num)
+	{
+		int rs = 0;
+		for(int i = 1; i <= num; i++)
+		{
+			rs += countDivi(i,5);
+		}
+		return rs;
+	}
 	//17.4找出两个数字中较大的一个，不用if-else或其他比较运算符
+	public int getBigger(int val1 , int val2)
+	{
+		
+		
+		return val1;
+	}
+	
 	
 	//17.5 计算机有四个槽，每个槽放一个球，颜色可能是红色、黄色、绿色或蓝色
 	//作为用户，你视图猜出颜色组合，打个比方，可能会猜YRGB。
