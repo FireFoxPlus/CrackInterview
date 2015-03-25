@@ -51,17 +51,48 @@ public class chap8_17 {
 	{
 		int rs = val2 * (((val1 - val2)>>31) & 1) +
 				val1 *  (((val2 - val1)>>31) & 1);
-		
 		return rs;
 	}
-	
-	
+		
 	//17.5 计算机有四个槽，每个槽放一个球，颜色可能是红色、黄色、绿色或蓝色
 	//作为用户，你视图猜出颜色组合，打个比方，可能会猜YRGB。
 	//要是才对某个槽的颜色，则算一次猜中，要是只才对颜色但是槽位猜错，就算一次伪猜中
 	//猜中不算伪猜中。比如：实际为RGBY，猜，GGRR，则算一次猜中，一次伪猜中。
 	//给定一个猜测和一种颜色组合，编写一个方法，返回猜中和伪猜中的次数
 	//已用c解决
+	public int map(char color)
+	{
+		int rs = 0; 
+		if(color == 'R')
+			rs = 0;
+		else if(color == 'G')
+			rs = 1;
+		else if(color == 'B')
+			rs = 2;
+		else if(color == 'Y')
+			rs = 3;
+		return rs;
+	}
+	public void guessColor(String guess , String infact)
+	{
+		int[] record = {0  ,  0  ,  0  , 0};
+		int fake = 0 , right = 0; 
+		for(int i  = 0; i < 4; i++)
+			record[map(guess.charAt(i))]++;
+		
+		for(int i = 0; i < 4; i++)
+		{
+			if(record[map(infact.charAt(i))] > 0)
+			{
+				record[map(infact.charAt(i))]--;
+				if(guess.charAt(i) != infact.charAt(i))
+					fake++;
+				else 
+					right++;
+			}
+		}
+		System.out.println("fake:" + fake +";right:" + right);
+	}
 	
 	//17.6给定一个整数数组，找出索引m和n，只要将m和n之间的元素排好序，
 	//整个数组就是有序的。注意m-n越小越好，也就是说，找出符合条件的最短序列
