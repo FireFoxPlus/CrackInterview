@@ -5,11 +5,11 @@
 #include <algorithm>
 #include "getShortSeq.h"
 using namespace std;
+#include <signal.h>
+#include <unistd.h>
 
 int main( void )
 {
-    int vals[] = {1,2 ,4 , 5 ,3};
-    getShortSeq ob;
-    ob.getSeq(vals , 5);
+    alarm(20);
     return 0;
 }

@@ -5,6 +5,7 @@ public class chap8_17 {
 	//已用c实现
 	
 	// 17.2判断玩家是否赢了井字游戏
+	//针对3*3棋盘的设计
 	public int wonSharpGame(int[][] deck)
 	{
 		//正对角线
@@ -23,7 +24,28 @@ public class chap8_17 {
 				return deck[0][i];
 		return 0;
 	}
-
+	//思路2：建立散列表，将所有的棋盘情况都存储在整数中，
+	//用1,2,3分别代表玩家1、玩家2和没有棋子，那么，整个棋盘
+	//其实是一个9位整数，且各位为1或2或3。
+	//在对一个特定的棋盘进行判断的时候，其实是将棋盘转换成了对应的整数，
+	//再查找散列表
+	public int DeckByInt(char[][] deck)
+	{
+		int rs = 0;
+		int factor = 1;
+		for(int i = 0; i < 3; i++)
+			for(int j = 0; j < 3; j++)
+			{
+				if(deck[i][j] == 'X')
+					rs += 3 * factor;
+				else if(deck[i][j] == 'O')
+					rs += 2 * factor;
+				
+				factor *= 3;
+			}
+		return rs;
+	}
+	
 	//17.3算出n阶乘有多少个尾随0
 	public int countDivi(int num , int divi)
 	{
@@ -47,11 +69,33 @@ public class chap8_17 {
 		return rs;
 	}
 	//17.4找出两个数字中较大的一个，不用if-else或其他比较运算符
+	public int flip(int val)
+	{
+		return val ^ 1;
+	}
+	
+	public int sign(int val)
+	{
+		return flip((val >> 31) & 1);
+	}
+	
+	public int getBigger_OverFlow(int val1 , int val2)
+	{
+		int fir = sign(val1 - val2);
+		int sec = flip(fir);
+		return val1 * fir + val2 * sec;
+	}
+	
 	public int getBigger(int val1 , int val2)
 	{
-		int rs = val2 * (((val1 - val2)>>31) & 1) +
-				val1 *  (((val2 - val1)>>31) & 1);
-		return rs;
+		int minus = val1 - val2;
+		int signFir = sign(val1);
+		int signSec = sign(val2);
+		int signMinus = sign(minus);
+		
+		int fir = (signFir ^ signSec) * signFir + flip(signFir ^ signSec) * signMinus;
+		int sec = flip(fir);
+		return fir * val1 + sec * val2;
 	}
 		
 	//17.5 计算机有四个槽，每个槽放一个球，颜色可能是红色、黄色、绿色或蓝色
@@ -167,24 +211,37 @@ public class chap8_17 {
 		return max;
 	}
 	//17.9设计一个方法，找出任意指定单词在一本书中出现的频率
+	//单次查询：依次查询，O(n)
+	//多次查询：对单词构造散列表
+	
 	//17.10xml非常冗长，找到一种编码方式，可将每个标签对应为预先定义好的整数值。
 	//打印xml元素编码后的版本
 	//17.11给定rand5()，实现一个方法rand7()。也就是说，给定一个产生0-4随机数的方法，
 	//产生0到6的随机数
-	public int rand5()
-	{
-		return ((int)(Math.random() * 10000)) % 5;
-	}
-	public int rand2()
-	{
-		return rand5() % 2;
-	}
-	public int rand7()
-	{
-		return  rand5() + rand2();
-	}
-	//17.12设计算法，找出数组中，两数之和为指定值的所有整数对
+	//关键问题在于，产生0-7的每个数字概率都需要等于1/7。所以，
+	//单纯的对rand5调用多次并不可行，需要使得调用结果，
+	//恰好产生某个范围内的数字各一次，5*rand5 + rand5就恰好产生
+	//0-24范围内的数字各一次。
 	
+	//17.12设计算法，找出数组中，两数之和为指定值的所有整数对
+	//未排序的数组只有已知s，找sum-s
+	//数组已排序
+	public void findPair(int[] vals , int len , int target)
+	{
+		int start = 0 , end = len - 1;
+		while(start != end)
+		{
+			if(vals[start] + vals[end] == target)
+			{
+				System.out.println(vals[start] + " : " + vals[end]);
+				end--;
+			}
+			else if(vals[start] + vals[end] > target)
+				end--;
+			else
+				start++;
+		}
+	}
 	//17.13有个简单的类似节点的数据结构BiNode，包含两个指向其他节点的指针
 	//public class{
 	//public BiNode node1 , node2;
