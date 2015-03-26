@@ -99,6 +99,44 @@ public class chap8_17 {
 	//已用c解决
 	
 	//17.7给定一个整数，打印该整数的英文描述
+	public void printString(int val)
+	{
+		String[] num1 = {"" , "one" , "two" , "three" , "four" , "five" , "six" , "seven"
+				, "eight" , "nine"};
+		String[] num2 = {"" , "ten" , "eleven" , "twelve" , "thirteen" , "fourteen" , 
+				"fifteen" , "sixteen" , "seventeen" , "eightteen" , "nineteen" , "twenty"
+				,"thirty" , "fourty" , "fifty" , "sixty" , "seventy" , "eighty" , "ninety"};
+		String[] digits = {"thousand" ,  "hundred" , "" , ""};
+		String int_rs = new String();
+		while(val != 0)
+		{
+			String tmp = new String();
+			tmp = String.valueOf(val % 10);
+			int_rs = tmp + int_rs;
+			val /= 10;
+		}
+		String str_rs = new String();
+		for(int j = int_rs.length() - 1; j >= 0; j--)
+		{
+			String tmp = new String();
+			if(j == int_rs.length() - 1 && int_rs.charAt(int_rs.length() - 2) != '1')
+			{
+				tmp = num1[int_rs.charAt(j) - '0']; 
+			}
+			else if(j == int_rs.length() - 1 && int_rs.charAt(int_rs.length() - 2) == '1')
+			{
+				tmp = num2[int_rs.charAt(int_rs.length() - 1) + int_rs.charAt(int_rs.length() - 2) - '0' - '0']; 
+				j--;
+			}
+			else{
+				tmp = num1[int_rs.charAt(j) - '0'];
+				if(int_rs.charAt(j) != '0')
+					tmp += digits[j];
+			}
+			str_rs = tmp + "  " + str_rs;
+		}
+		System.out.println(str_rs);
+	}
 	
 	//17.8给定一个整数数组，求出综合最大的连续数列，并返回总和
 	public int getMaxSum(int []vals , int len)
