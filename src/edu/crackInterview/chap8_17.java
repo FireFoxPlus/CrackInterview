@@ -256,4 +256,23 @@ public class chap8_17 {
 	//在词典中都可以找到，有些则找不到。
 	//给定一个字典，设计一个算法，找出拆分一连串单词的最佳方式。最佳的意义是：
 	//解析后无法辨识的单词最少，无法辨识的单词全部用大写表示
+	public boolean contains(String word)
+	{
+		return false;
+		
+	}
+	
+	public int  fix(String articl , int start , int end)
+	{
+		if(end > articl.length())
+			return end - start;
+		String word = articl.substring(start , end + 1);
+		
+		int bestCut = fix(articl , end + 1 , end + 1);
+		if(!contains(word))
+			bestCut += word.length();
+		
+		int bestExtent = fix(articl , start , end + 1);
+		return Math.min(bestCut , bestExtent);
+	}
 }
