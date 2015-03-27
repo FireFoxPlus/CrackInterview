@@ -2,7 +2,30 @@ package edu.crackInterview;
 
 public class chap8_18 {
 	//18.1将两数相加，不使用加号或其他算术运算符
+	public int addWithBit(int val1 , int val2)
+	{
+		int tmp = val1 ^ val2;
+		int carry = (val1 & val2)<<1;
+		int rs  = tmp | carry;
+		if((carry & tmp) << 1 != 0)
+			return addWithBit(rs , carry);
+		return rs;
+	}
 	
+	public int addWithBit_2(int val1 , int val2)
+	{
+		int tmp = val1 ^ val2;
+		int carry = (val1 & val2)<< 1;
+		int rs =  tmp | carry;
+		while((tmp & carry) << 1 != 0)
+		{
+			int newtmp = rs ^ carry;
+			carry = (tmp & carry)<<1;
+			rs = newtmp | carry;
+			tmp = newtmp;
+		}
+		return rs;
+	}
 	
 	//18.2洗一副牌，做到完美洗牌。即这副牌52！种排列组合凡事出现的概率相同
 	//18.3从大小为n的数组中随机选出m个数。要求每个元素被选中的概率相同
