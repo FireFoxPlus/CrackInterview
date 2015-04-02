@@ -57,6 +57,8 @@
 		<Unit filename="isSubTree.h" />
 		<Unit filename="lastKLine.cpp" />
 		<Unit filename="lastKLine.h" />
+		<Unit filename="longSub.cpp" />
+		<Unit filename="longSub.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="minBTree.cpp" />
 		<Unit filename="minBTree.h" />

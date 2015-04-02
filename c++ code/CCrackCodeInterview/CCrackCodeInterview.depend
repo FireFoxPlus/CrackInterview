@@ -40,13 +40,15 @@
 	<iostream>
 	<cstring>
 
-1427286243 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
+1427869503 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
 	<iostream>
 	<vector>
 	<string>
 	<stdio.h>
 	<algorithm>
-	"TreeToList.h"
+	<map>
+	<set>
+	"longSub.h"
 
 1425346062 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\reverse.cpp
 	"reverse.h"
@@ -271,4 +273,11 @@
 	<stdio.h>
 	<algorithm>
 	"getShortSeq.h"
+
+1427870797 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\longsub.cpp
+	<iostream>
+	"longSub.h"
+	<cstring>
+
+1427869383 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\longsub.h
 
