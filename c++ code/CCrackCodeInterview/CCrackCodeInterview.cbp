@@ -51,6 +51,8 @@
 		<Unit filename="getShortSeq.h" />
 		<Unit filename="guessColor.cpp" />
 		<Unit filename="guessColor.h" />
+		<Unit filename="heapSort.cpp" />
+		<Unit filename="heapSort.h" />
 		<Unit filename="isBalance.h" />
 		<Unit filename="isSearchTree.cpp" />
 		<Unit filename="isSearchTree.h" />

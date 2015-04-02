@@ -11,9 +11,8 @@ using namespace std;
 
 int main( void )
 {
-    string aaa = "asdda";
-    string bb(aaa.begin() + 1 , aaa.begin() + 3);
-    cout<<bb;
+
+
 }
 
 
