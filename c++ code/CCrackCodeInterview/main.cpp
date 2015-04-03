@@ -2,77 +2,17 @@
 #include <vector>
 #include <string>
 #include <stdio.h>
-#include <algorithm>
-#include <map>
-#include <set>
-#include "longSub.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include <cstring>
-
-
-#include <iostream>
-
+#include "numInMin.h"
 
 using namespace std;
 
-bool isBefore(int* input , int now , int next , int len)
-{
-    bool foundNext = false;
-    int rs = false;
-    for(int i = 0; i < len; i++)
-    {
-        if(input[i] == now)
-        {
-            if(foundNext)
-                rs = true;
-        }
-        else if(input[i] == next)
-        {
-            foundNext = true;
-        }
-    }
-    return rs;
-}
-
-void printInOrder(int *input , int len)
-{
-    int * copys = new int[len];
-    memcpy(copys , input , sizeof(int) * len);
-    sort(copys , copys + len);
-    for(int i = 0; i < len; i++)
-    {
-        if(copys[i] == input[i])
-            cout<<copys[i]<<endl;
-        else
-        {
-            cout<<copys[i]<<" ";
-            int tmp = copys[i];
-            for(int j = i + 1; j < len; j++)
-            {
-                if(isBefore(input , tmp , copys[j] , len))
-                {
-                    cout<<copys[j]<<" ";
-                    i++;
-                }
-                else
-                {
-                    cout<<endl;
-                    break;
-                }
-
-            }
-
-        }
-
-    }
-}
-
-
 int main(void)
 {
-    int vals[] = {1 , 2 , 5 , 8 , 10 , 4 ,3 ,6 ,9 ,7};
-    printInOrder(vals , 10);
+    int val[] = {1 , 2 , 3 , 4 , 5 , 6 , 7 ,8 ,9 ,10 , 11 , 12};
+    numInMid ob;
+    int mid = ob.getMidNum(val , 12);
+    cout<<mid;
+
 
 }
 

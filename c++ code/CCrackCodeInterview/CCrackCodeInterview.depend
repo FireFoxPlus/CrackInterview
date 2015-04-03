@@ -40,19 +40,12 @@
 	<iostream>
 	<cstring>
 
-1427979623 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
+1428052510 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
 	<iostream>
 	<vector>
 	<string>
 	<stdio.h>
-	<algorithm>
-	<map>
-	<set>
-	"longSub.h"
-	<stdlib.h>
-	<stdio.h>
-	<cstring>
-	<iostream>
+	"numInMin.h"
 
 1425346062 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\reverse.cpp
 	"reverse.h"
@@ -290,4 +283,25 @@
 	<iostream>
 
 1427956767 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\heapsort.h
+
+1428037985 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\longcombine.cpp
+	"longCombine.h"
+	<map>
+	<algorithm>
+	<iostream>
+
+1428036909 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\longcombine.h
+	<string>
+
+1428029901 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\reorder.cpp
+	<stdio.h>
+	<cstring>
+	<algorithm>
+	<iostream>
+
+1428049808 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\numinmin.h
+
+1428052759 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\numinmin.cpp
+	"numInMin.h"
+	<iostream>
 
