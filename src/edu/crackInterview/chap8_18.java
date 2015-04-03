@@ -28,8 +28,21 @@ public class chap8_18 {
 	}
 	
 	//18.2洗一副牌，做到完美洗牌。即这副牌52！种排列组合方式出现的概率相同
+	public void shuffle(int[] cards , int len)
+	{
+		for(int i = 0; i < len; i++)
+			{
+				int k = (int)(Math.random() * i);
+				cards[k] = cards[k] + cards[i];
+				cards[i] = cards[k] - cards[i];
+				cards[k] = cards[k] - cards[i];
+			}
+	}
+	
 	//18.3从大小为n的数组中随机选出m个数。要求每个元素被选中的概率相同
 	//记录哪些位置被选中过？
+	
+	
 	
 	//18.4编写方法，数出0到n中数字2出现的次数
 	

@@ -40,7 +40,7 @@
 	<iostream>
 	<cstring>
 
-1427952609 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
+1427979623 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\main.cpp
 	<iostream>
 	<vector>
 	<string>
@@ -49,6 +49,10 @@
 	<map>
 	<set>
 	"longSub.h"
+	<stdlib.h>
+	<stdio.h>
+	<cstring>
+	<iostream>
 
 1425346062 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\reverse.cpp
 	"reverse.h"
@@ -281,8 +285,9 @@
 
 1427869383 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\longsub.h
 
-1427952601 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\heapsort.cpp
+1427958216 source:e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\heapsort.cpp
 	"heapSort.h"
+	<iostream>
 
-1427952578 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\heapsort.h
+1427956767 e:\crackcodeinterview\crackinterview\c++ code\ccrackcodeinterview\heapsort.h
 
