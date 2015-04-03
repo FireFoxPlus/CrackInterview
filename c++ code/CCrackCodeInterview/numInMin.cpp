@@ -11,7 +11,7 @@ bool isSmaller(int val1 , int val2)
     return val1 < val2;
 }
 
-void numInMid::rebuild(int *vals , int preI , int len , bool (*compare)(int val1 , int val2))
+void numInMid::rebuild(int *vals , int preI , int len , bool (*compare)(int val1 , int val2) , bool (*compare2)(int , int))
 {
     if(vals == NULL)
         return;
@@ -19,7 +19,7 @@ void numInMid::rebuild(int *vals , int preI , int len , bool (*compare)(int val1
     for(; preI * 2 + 1 < len; preI = child)
     {
         child = preI * 2 + 1;
-        if(child < len - 1 && vals[child] < vals[child + 1])
+        if(child < len - 1 && compare2(vals[child] , vals[child + 1]))
             child++;
         if(compare(vals[preI] , vals[child]))
         {
@@ -32,12 +32,12 @@ void numInMid::rebuild(int *vals , int preI , int len , bool (*compare)(int val1
     }
 }
 
-void numInMid::heapAjust(int *vals , int len , bool (*compare)(int val1 , int val2))
+void numInMid::heapAjust(int *vals , int len , bool (*compare)(int val1 , int val2) , bool (*compare2)(int val1 , int val2))
 {
     if(vals == NULL)
         return;
     for(int i = len / 2 + 1; i >= 0; i--)
-        rebuild(vals , i , len , compare);
+        rebuild(vals , i , len , compare , compare2);
 }
 
 int numInMid::getMidNum(int* vals , int len)
@@ -52,11 +52,13 @@ int numInMid::getMidNum(int* vals , int len)
     //小于midRs以大根堆组织，大于midRs以小根堆组织
     for(int i = 0; i < len; i++)
     {
+        if(i == 5)
+            cout<<endl;
         if(vals[i] <= midRs)
         {
             minHeap[minIndex] = vals[i];
             minIndex++;
-            heapAjust(minHeap , minIndex , isSmaller);
+            heapAjust(minHeap , minIndex , isSmaller , isBigger);
             for(int i = 0; i < minIndex; i++)
                 cout<<minHeap[i];
             cout<<endl;
@@ -65,7 +67,7 @@ int numInMid::getMidNum(int* vals , int len)
         {
             maxHeap[maxIndex] = vals[i];
             maxIndex++;
-            heapAjust(maxHeap , maxIndex , isBigger);
+            heapAjust(maxHeap , maxIndex , isBigger , isSmaller);
             for(int i = 0; i < maxIndex; i++)
                 cout<<maxHeap[i];
             cout<<endl;
@@ -76,7 +78,7 @@ int numInMid::getMidNum(int* vals , int len)
             midRs = maxHeap[0];
             minHeap[minIndex] = midRs;
             minIndex++;
-            heapAjust(minHeap , minIndex , isSmaller);
+            heapAjust(minHeap , minIndex , isSmaller, isBigger);
              for(int i = 0; i < minIndex; i++)
                 cout<<minHeap[i];
             cout<<endl;
@@ -86,7 +88,7 @@ int numInMid::getMidNum(int* vals , int len)
             maxHeap[maxIndex - 1] = maxHeap[0] - maxHeap[maxIndex - 1];
             maxHeap[0] = maxHeap[0] - maxHeap[maxIndex - 1];
             maxIndex--;
-            heapAjust(maxHeap , maxIndex , isBigger);
+            heapAjust(maxHeap , maxIndex , isBigger , isSmaller);
               for(int i = 0; i < maxIndex; i++)
                 cout<<maxHeap[i];
             cout<<endl;
@@ -96,7 +98,7 @@ int numInMid::getMidNum(int* vals , int len)
             midRs = minHeap[0];
             maxHeap[maxIndex] = midRs;
             maxIndex++;
-            heapAjust(maxHeap , maxIndex , isBigger);
+            heapAjust(maxHeap , maxIndex , isBigger , isSmaller);
 
 
 
@@ -104,7 +106,7 @@ int numInMid::getMidNum(int* vals , int len)
             minHeap[minIndex - 1] = minHeap[0] - minHeap[minIndex - 1];
             minHeap[0] = minHeap[0] - minHeap[minIndex - 1];
             minIndex--;
-            heapAjust(minHeap , minIndex , isSmaller);
+            heapAjust(minHeap , minIndex , isSmaller , isBigger);
              for(int i = 0; i < minIndex; i++)
                 cout<<minHeap[i];
             cout<<endl;
