@@ -162,7 +162,50 @@ public class chap8_18 {
 		return rs;
 	}
 	//18.11给定一个方阵，其中每个元素非黑即白，找出四条边皆为黑色像素的最大子方阵
+	
 	//18.12给定一个正整数和负整数组成的M*N矩阵，编写代码找出元素总和最大的子矩阵
+	public void clearArray(int [] array)
+	{
+		for(int i = 0; i < array.length; i++)
+			array[i] = 0;
+	}
+	public int maxSubMatrix(int [][] matrix)
+	{
+		int rowCount = matrix.length;
+		int colCount = matrix[0].length;
+		
+		int [] partial = new int[colCount];
+		int maxSum = 0;
+		
+		for(int rowStart = 0; rowStart < rowCount; rowStart++)
+		{	
+			clearArray(partial);
+			for(int rowEnd = rowStart; rowEnd < rowCount; rowEnd++)
+			{	
+				for(int i = 0; i < colCount; i++)
+				{
+					partial[i] += matrix[rowEnd][i];
+				}
+				int tempMax = maxSubArray(partial , colCount);
+				maxSum = Math.max(maxSum ,  tempMax);
+			}
+		}
+		return maxSum;
+	}
+	
+	public int maxSubArray(int [] array , int n)
+	{
+		int maxSum = 0;
+		int runningSum = 0;
+		for(int i = 0; i < n; i++)
+		{
+			runningSum += array[i];
+			maxSum = Math.max(maxSum , runningSum);
+			if(runningSum < 0)
+				runningSum = 0;
+		}
+		return maxSum;
+	}
 	//18.13给定一份几百万个单词的清单，设计算法，创建由字母组成的最大矩形，其中
 	//每一行组成一个单词，每一列也组成一个单词，不要求这些单词在清单里连续出现，
 	//但是要求所有的行等长，所有的列，等高。
