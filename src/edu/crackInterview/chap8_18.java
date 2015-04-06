@@ -1,5 +1,13 @@
 package edu.crackInterview;
 
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Queue;
+import java.util.Set;
+import java.util.TreeMap;
+import java.util.TreeSet;
+
 public class chap8_18 {
 	//18.1将两数相加，不使用加号或其他算术运算符
 	public int addWithBit(int val1 , int val2)
@@ -93,11 +101,66 @@ public class chap8_18 {
 	//应该建立字典树，即trie树
 	
 	//18.9随机生成一些数字并传入某个方法，编写程序，每当收到数字，找出并记录中位数
-	//平衡二叉排序树
+	//建立两个堆
 	
 	//18.10给定两个字典里的词，长度相等。将一个单词变换为另一个单词，
-	//一次只改动一个字母，
-	//变换过程中，每一步新得到的单词都必须是字典里有的
+	//一次只改动一个字母，变换过程中，
+	//每一步新得到的单词都必须是字典里有的
+	public LinkedList<String> transform(String start , String end , Set<String> dic)
+	{
+		start = start.toUpperCase();
+		end = end.toUpperCase();
+		Queue<String> action = new LinkedList<String>();
+		Set<String> visit = new HashSet<String>();
+		Map<String , String> backTrack = new TreeMap<String , String>();
+		action.add(start);
+		visit.add(start);
+		while(!action.isEmpty())
+		{
+			String w = action.poll();
+			for(String v : getOneEditWords(w))
+			{
+				if(v.equals(end))
+				{
+					LinkedList<String> list = new LinkedList<String>();
+					list.add(v);
+					while(w != null)
+					{
+						list.add(0 , w);
+						w = backTrack.get(w);
+					}
+					return list;
+				}
+				if(dic.contains(v))
+				{
+					if(!visit.contains(v))
+					{
+						action.add(v);
+						visit.add(v);
+						backTrack.put(v , w);
+					}
+				}
+			}			
+		}
+		return null;
+	}
+	public Set<String> getOneEditWords(String word)
+	{
+		Set<String> rs = new TreeSet<String>() ;
+		for(int i = 0; i < word.length(); i++)
+		{
+			char[] wordArray = word.toCharArray();
+			for(char c = 'A'; c < 'Z'; c++)
+			{
+				if(c != wordArray[i])
+				{
+					wordArray[i] = c;
+					rs.add(new String(wordArray));
+				}
+			}	
+		}
+		return rs;
+	}
 	//18.11给定一个方阵，其中每个元素非黑即白，找出四条边皆为黑色像素的最大子方阵
 	//18.12给定一个正整数和负整数组成的M*N矩阵，编写代码找出元素总和最大的子矩阵
 	//18.13给定一份几百万个单词的清单，设计算法，创建由字母组成的最大矩形，其中
