@@ -8,9 +8,9 @@ using namespace std;
 
 int main(void)
 {
-    int val[] = {1 , 2 , 3 , 4 , 5 , 6 , 7 ,8 ,9 ,10 , 11 , 12};
+    int val[] = {1 , 2 , 3 , 4 , 5 , 6 , 7 ,8 ,9 ,10};
     numInMid ob;
-    int mid = ob.getMidNum(val , 12);
+    int mid = ob.getMidNum(val , 10);
     cout<<mid;
 
 
